@@ -1,7 +1,5 @@
 "use client"
 import { ImageGallery } from "react-image-grid-gallery";
-import Image from 'next/image'
-import Leetcode from '../../../public/leetcode.jpg'
 
 const imagesArray = [
     {
@@ -12,22 +10,22 @@ const imagesArray = [
     {
     alt: "super hot",
     caption: "super hot grill",
-    src: "/photos/p9.jpg",
+    src: "/photos/p9.png",
     },
     {
     alt: "oakville",
     caption: "oakville!",
-    src: "/photos/p8.jpg",
+    src: "/photos/p8.png",
     },
     {
     alt: "cypress",
     caption: "cypress mountain!!",
-    src: "/photos/p7.jpg",
+    src: "/photos/p7.png",
     },
     {
      alt: "North York",
      caption: "north york!!",
-     src: "/photos/p6.jpg",
+     src: "/photos/p6.png",
     },
     {
      alt: "FAHMI",
@@ -42,7 +40,7 @@ const imagesArray = [
     {
       alt: "mukbang",
       caption: "mukbanging",
-      src: "/photos/p3.jpg",
+      src: "/photos/p3.png",
     },
     {
       alt: "kitty",
