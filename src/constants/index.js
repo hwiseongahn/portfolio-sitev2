@@ -10,4 +10,12 @@ export const projects = [
                     researching for Toronto real-estate`,
       projectLink: "https://github.com/Ch3mson/toronto-2021-neighbourhoods"
     },
+    {
+      title: "CP & Leetcode",
+      subtitle: "A struggle",
+      imageSrc: "/leetcode.jpg",
+      description1: `Learned C++ and Python by completing some fun coding exercises`,
+      description2: `This photo was taken at 2:30 AM at REV`,
+      projectLink: "https://github.com/Ch3mson/competitive_programming"
+    },
   ];
