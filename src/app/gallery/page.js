@@ -5,52 +5,52 @@ const imagesArray = [
     {
     alt: "it's 3am",
     caption: "dehydrated at 3am",
-    src: "/photos/p10.png",
+    src: "/photos/p10c.png",
     },
     {
     alt: "super hot",
     caption: "super hot grill",
-    src: "/photos/p9.png",
+    src: "/photos/p9c.png",
     },
     {
     alt: "oakville",
     caption: "oakville!",
-    src: "/photos/p8.png",
+    src: "/photos/p8c.png",
     },
     {
     alt: "cypress",
     caption: "cypress mountain!!",
-    src: "/photos/p7.png",
+    src: "/photos/p7c.png",
     },
     {
      alt: "North York",
      caption: "north york!!",
-     src: "/photos/p6.png",
+     src: "/photos/p6c.png",
     },
     {
      alt: "FAHMI",
      caption: "FAHMI",
-     src: "/photos/p5.png",
+     src: "/photos/p5c.png",
     },
     {
      alt: "first coop",
      caption: "first coop",
-     src: "/photos/p4.png",
+     src: "/photos/p4c.png",
     },
     {
       alt: "mukbang",
       caption: "mukbanging",
-      src: "/photos/p3.png",
+      src: "/photos/p3c.png",
     },
     {
       alt: "kitty",
       caption: "alter ego",
-      src: "/photos/p2.png",
+      src: "/photos/p2c.png",
     },
     {
       alt: "cute pic",
       caption: "felt cute",
-      src: "/photos/p1.png",
+      src: "/photos/p1c.png",
     },
 ];
 
