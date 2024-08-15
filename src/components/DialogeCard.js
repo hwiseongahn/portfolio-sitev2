@@ -24,7 +24,7 @@ import {
           style={{
             borderRadius: '12px',
           }}
-          className='flex max-w-[270px] flex-col overflow-hidden border border-zinc-300 bg-zinc-100 text-zinc-900'
+          className='flex min-w-[382px] flex-col overflow-hidden border border-zinc-300 bg-zinc-100 text-zinc-900'
         >
           <DialogImage
             src={imageSrc}
