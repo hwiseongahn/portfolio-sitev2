@@ -8,7 +8,7 @@ export default function DialogeContainer() {
   return (
     <main className='max-w-[800px] mx-auto py-32'>
       <div className='flex items-center'>
-        <h1 className='text-4xl md:text-5xl font-bold py-2'>
+        <h1 className='text-4xl md:text-5xl font-bold pb-3'>
             Projects 
         </h1>
         <Image 

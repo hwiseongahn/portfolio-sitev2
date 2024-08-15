@@ -4,7 +4,7 @@ export const projects = [
       subtitle: "For real-estate developers",
       imageSrc: "/toronto.jpg",
       description1: `A Streamlit website that utilizes pandas and numpy for data processing and
-                    matplotlib for visuals.`,
+                    matplotlib/plotly for graphs.`,
       description2: `Research for real-estate is tedious, and performing comparitive analysis is often
                     hard to manage without proper organization. This site provides a solution for those
                     researching for Toronto real-estate`,
