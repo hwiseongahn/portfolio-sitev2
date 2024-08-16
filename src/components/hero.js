@@ -14,7 +14,7 @@ export default function Hero() {
           height={40}
           className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
         />
-        <h1 className='text-lg md:text-3xl lg:text-5xl font-bold mx-2'>
+        <h1 className='text-4xl md:text-5xl font-bold mx-2'>
           Welcome to Bensons portfolio 
         </h1>
         <Image 
