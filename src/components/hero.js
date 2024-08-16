@@ -10,17 +10,19 @@ export default function Hero() {
         <Image 
           src={Wave} 
           alt='Wave hand' 
-          width={50}
-          height={50}
+          width={40}
+          height={40}
+          className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
         />
-        <h1 className='text-4xl md:text-5xl font-bold mx-2'>
+        <h1 className='text-lg md:text-3xl lg:text-5xl font-bold mx-2'>
           Welcome to Bensons portfolio 
         </h1>
         <Image 
           src={Hand} 
           alt='Hand' 
-          width={50}
-          height={50}
+          width={40}
+          height={40}
+          className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
         />
       </div>
     </main>
