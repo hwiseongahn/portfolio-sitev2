@@ -2,22 +2,22 @@ import React from 'react'
 import Image from 'next/image'
 import Techie from '../../public/techie.png'
 
-
 export default function About() {
   return (
-    <div className='py-32 max-w-[800px] mx-auto leading-8 sm:text-left md:text-justify'>
-        <div className="flex items-center pb-2">
-          <h1 className="text-4xl md:text-5xl font-bold">
+    <div className='py-8 sm:py-16 md:py-32 px-4 sm:px-6 md:px-8 max-w-[800px] mx-auto sm:text-left md:text-justify'>
+        <div className="flex items-center pb-4 sm:pb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mr-2">
             About
           </h1>
           <Image 
             src={Techie} 
-            alt='Wave hand' 
-            width={50}
-            height={50}
+            alt='Techie icon' 
+            width={40}
+            height={40}
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
           />
         </div>
-        <div className='text-lg space-y-4'>
+        <div className='text-base sm:text-lg space-y-6 leading-relaxed'>
           <p>
               Hi! My name is Benson Yan and I am a student at The University of Waterloo, studying computer science with a specialization in Artificial Intelligence.
               I am currently in my 2A term, taking Linear Algebra 2, Intro to Statistics, Object Oriented Programming, Logic and Computation, and Cognitive Processes.
