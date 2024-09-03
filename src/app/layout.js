@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Container from "@/components/container";
-import Header from "@/components/header";
+import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,13 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-            <body className={`${inter.className} bg-zinc-100 text-zinc-900
-                      min-h-screen`}>
-              <Container>
+            <body className={`${inter.className} relative`}>
               <Header />
+              <main id='skip-nav' className='mx-auto mb-16 max-w-5xl px-5 py-24 sm:px-8'>
                 {children}
+              </main>
               <Footer />
-              </Container>
             </body>
     </html>
   );

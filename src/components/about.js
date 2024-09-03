@@ -5,7 +5,7 @@ import Techie from '../../public/techie.png'
 
 export default function About() {
   return (
-    <div className='py-32 max-w-[800px] mx-auto leading-8 sm:text-left md:text-justify'>
+    <div className='py-32 mx-auto leading-8 sm:text-left md:text-justify'>
         <div className="flex items-center pb-2">
           <h1 className="text-4xl md:text-5xl font-bold">
             About

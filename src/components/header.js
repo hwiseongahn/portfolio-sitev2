@@ -1,50 +1,62 @@
-"use client"
+'use client'
 
-import React from 'react'
-import Image from 'next/image'
-import Head from '../../public/head.png'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import Navbar from './navbar'
+import Image from 'next/image'
+import headSrc from '../../public/head.png'
 
-const navLinks = [
-  {
-    href: "/",
-    label: "Home",
-  },
-  {
-    href: "/gallery",
-    label: "Gallery",
-  },
-  {
-    href: "/contacts",
-    label: "Contacts",
-  },
-]
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
 
-export default function Header() {
+  useEffect(() => {
+    const changeBackground = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
 
-  const pathName = usePathname();
-  console.log(pathName);
+    document.addEventListener('scroll', changeBackground)
+
+    return () => {
+      document.removeEventListener('scroll', changeBackground)
+    }
+  }, [])
 
   return (
-    <header className='flex justify-between items-center py-4 px-3 border-b'>
-        
-        <Link href="/">
-        <Image src={Head} alt="Logo" className="w-[35px] h-[35px]" width={35} height={35} />
-        </Link>
-        <nav>
-          <ul className='flex gap-x-5 text-[14px]'>
-            {
-              navLinks.map((link, index) => (
-                <li key={index}>
-                    <Link href={link.href} className={` ${pathName === link.href ? "text-zinc-900" : "text-zinc-400"}`}>
-                      {link.label}
-                    </Link>
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
-    </header>
+    <motion.header
+      className={`bg-background/30 fixed inset-x-0 top-4 z-40 mx-auto flex h-[60px] max-w-5xl items-center justify-between rounded-2xl px-8 shadow-sm saturate-100 backdrop-blur-[10px] transition-colors ${
+        isScrolled ? 'bg-background/80' : ''
+      }`}
+      initial={{
+        y: -100
+      }}
+      animate={{
+        y: 0
+      }}
+      transition={{
+        duration: 0.3
+      }}
+    >
+      <a
+        href='#skip-nav'
+        className='bg-background focus-visible:ring-ring fixed left-4 top-4 -translate-y-20 rounded-sm border p-2 font-medium shadow-sm transition-transform focus-visible:translate-y-0 focus-visible:ring focus-visible:ring-offset-2'
+      >
+        <span>Skip to main content</span>
+      </a>
+      <Link href='/' className='flex items-center justify-center'>
+        <span className='sr-only'>Homepage</span>
+        {/* Image replaces text logo */}
+        <Image src={headSrc} alt="Logo" width={40} height={40} />
+      </Link>
+      <div className='flex items-center gap-2'>
+        <Navbar />
+      </div>
+    </motion.header>
   )
 }
+
+export default Header
