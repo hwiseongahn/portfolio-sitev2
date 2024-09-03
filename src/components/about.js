@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Techie from '../../public/techie.png'
 
-
 export default function About() {
   return (
     <div className='py-32 mx-auto leading-8 sm:text-left md:text-justify'>
@@ -12,12 +11,13 @@ export default function About() {
           </h1>
           <Image 
             src={Techie} 
-            alt='Wave hand' 
-            width={50}
-            height={50}
+            alt='Techie icon' 
+            width={40}
+            height={40}
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
           />
         </div>
-        <div className='text-lg space-y-4'>
+        <div className='text-base sm:text-lg space-y-6 leading-relaxed'>
           <p>
               Hi! My name is Benson Yan and I am a student at The University of Waterloo, studying computer science with a specialization in Artificial Intelligence.
               I am currently in my 2A term, taking Linear Algebra 2, Intro to Statistics, Object Oriented Programming, Logic and Computation, and Cognitive Processes.
