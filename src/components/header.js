@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react'
 import Navbar from './navbar'
 import Image from 'next/image'
 import headSrc from '../../public/head.png'
+import { Separator } from "@/components/ui/separator"
+import { ModeToggle } from '@/components/ui/modeToggle'
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -48,12 +51,12 @@ const Header = () => {
         <span>Skip to main content</span>
       </a>
       <Link href='/' className='flex items-center justify-center'>
-        <span className='sr-only'>Homepage</span>
-        {/* Image replaces text logo */}
         <Image src={headSrc} alt="Logo" width={40} height={40} />
       </Link>
       <div className='flex items-center gap-2'>
         <Navbar />
+        <Separator orientation="vertical" className="h-6"/>
+        <ModeToggle />
       </div>
     </motion.header>
   )
