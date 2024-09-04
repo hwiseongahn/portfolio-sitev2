@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
+import { Button } from "@/components/ui/button"
 
 // Placeholder components
 import CodingHours from './codingHours'
@@ -10,6 +11,7 @@ import Connect from './connect';
 import FavoriteFramework from './favouriteFramework';
 import LocationCard from './locationCard'
 import StacksCard from './stacksCard'
+import { useRouter } from 'next/navigation';
 
 const variants = {
   initial: {
@@ -26,6 +28,12 @@ const AboutMe = () => {
   const cardsRef = useRef(null);
   const isInView = useInView(cardsRef, { once: true, margin: '-100px' });
 
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/about');
+  };
+
   return (
     <motion.div
       initial="initial"
@@ -38,7 +46,7 @@ const AboutMe = () => {
       className="relative my-24"
     >
       <motion.h2
-        className="text-center text-3xl font-bold sm:text-4xl"
+        className="text-center text-3xl font-bold sm:text-4xl dark:text-neutral-100"
         initial={{
           y: 30,
           opacity: 0
@@ -54,7 +62,7 @@ const AboutMe = () => {
         About Me
       </motion.h2>
       <motion.div
-        className="mt-12 grid gap-4 md:grid-cols-2"
+        className="mt-12 grid gap-4 md:grid-cols-2 dark:text-neutral-100"
         initial={{
           y: 40,
           opacity: 0
@@ -80,12 +88,9 @@ const AboutMe = () => {
         </div>
       </motion.div>
       <div className="my-8 flex items-center justify-center">
-        <Link
-          href="/about"
-          className="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100 transition-colors"
-        >
+        <Button variant="outline" onClick={handleClick}>
           Know more about me
-        </Link>
+        </Button>
       </div>
     </motion.div>
   );

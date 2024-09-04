@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { ImageGallery } from "react-image-grid-gallery";
 
 const imagesArray = [
@@ -56,7 +57,7 @@ const imagesArray = [
 
 export default function page() {
   return (
-    <div>
+    <main>
         <ImageGallery
             imagesInfoArray={imagesArray}
             columnCount={"auto"}
@@ -64,6 +65,25 @@ export default function page() {
             gapSize={22}
         />
         <p>Will be regularly updated (2024-08-13)</p>
-    </div>
+        <Image
+            width={1512}
+            height={550}
+            className='absolute left-1/2 top-0 -z-10 -translate-x-1/2'
+            src='/gradient-background-top.png'
+            alt=''
+            role='presentation'
+            priority
+          />
+          <Image
+            width={1512}
+            height={447}
+            className='absolute -bottom-6 left-1/2 -z-10 -translate-x-1/2'
+            src='/gradient-background-bottom.png'
+            alt=''
+            role='presentation'
+            priority
+          />
+    </main>
+    
   )
 }

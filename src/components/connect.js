@@ -45,7 +45,7 @@ const Connect = () => {
             <Link
               key={href}
               href={href}
-              className='flex items-center gap-3 transition-colors text-slate-500 hover:text-black'
+              className='text-muted-foreground hover:text-foreground flex items-center gap-3 transition-colors'
             >
               <Icon className='size-[18px]' />
               <h2 className='font-light'>{title}</h2>

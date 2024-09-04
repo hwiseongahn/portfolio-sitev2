@@ -5,6 +5,8 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowUpRightIcon, LightbulbIcon } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { Button } from "@/components/ui/button"
 
 
 const variants = {
@@ -46,6 +48,12 @@ const projects = [
 const SelectedProjects = () => {
   const projectsRef = useRef(null);
   const isInView = useInView(projectsRef, { once: true, margin: '-100px' });
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/projects');
+  };
 
   return (
     <motion.div
@@ -95,12 +103,9 @@ const SelectedProjects = () => {
           ))}
       </motion.div>
       <div className='my-8 flex items-center justify-center'>
-        <a
-          href='/projects'
-          className='rounded-xl border border-solid border-gray-300 px-6 py-2 text-gray-800 hover:text-gray-500'
-        >
+      <Button variant="outline" onClick={handleClick}>
           See all projects
-        </a>
+        </Button>
       </div>
     </motion.div>
   );
@@ -118,7 +123,7 @@ const Card = ({ project }) => {
       <div className='flex items-center justify-between p-4'>
         <div className='flex items-center gap-3'>
           <LightbulbIcon className='w-4 h-4' />
-          <h2 className='font-light'>Project</h2>
+          <h2 className='font-light dark:text-neutral-100'>Project</h2>
         </div>
         <ArrowUpRightIcon className='w-4 h-4 opacity-0 transition-opacity group-hover:opacity-100' />
       </div>
@@ -127,7 +132,7 @@ const Card = ({ project }) => {
       </div>
       <div className='absolute bottom-6 left-7 flex flex-col transition-[left] ease-out group-hover:left-[30px]'>
         <h3 className='font-title text-2xl font-bold text-white'>{name}</h3>
-        <p className='text-white mt-2'>{description}</p>
+        <p className='dark:text-muted-foreground mt-2 text-zinc-100'>{description}</p>
       </div>
     </Link>
   );

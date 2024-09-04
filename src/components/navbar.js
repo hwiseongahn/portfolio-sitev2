@@ -14,11 +14,11 @@ const navLinks = [
   {
     href: "/gallery",
     label: "Gallery",
-  },
-  {
-    href: "/contacts",
-    label: "Contacts",
-  },
+  }
+  // {
+  //   href: "/contacts",
+  //   label: "Contacts",
+  // },
 ]
 
 export default function Navbar() {
