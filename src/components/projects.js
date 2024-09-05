@@ -25,24 +25,17 @@ const projects = [
   {
     slug: 'Word Hunt Solver',
     name: 'Word Hunt Solver',
-    description: 'This is the description Word Hunt Solver',
+    description: 'To cheat your word hunt games',
     src: '/WHS.png',
     selected: true
   },
   {
     slug: 'Vibify',
     name: 'Vibify',
-    description: 'This is the description for Vibify',
+    description: 'Find your music discovery',
     src: '/Vibify.png',
-    selected: false
-  },
-  {
-    slug: 'Toronto Neighbourhoods',
-    name: 'Toronto Neighbourhoods',
-    description: 'This is the description for Toronto Neighbourhoods',
-    src: '/Toronto.jpg',
     selected: true
-  }
+  },
 ];
 
 const SelectedProjects = () => {
@@ -80,7 +73,7 @@ const SelectedProjects = () => {
           duration: 0.3
         }}
       >
-        Selected Projects
+        Featured Projects
       </motion.h2>
       <motion.div
         className='mt-12 grid gap-4 md:grid-cols-2'
@@ -103,9 +96,12 @@ const SelectedProjects = () => {
           ))}
       </motion.div>
       <div className='my-8 flex items-center justify-center'>
-      <Button variant="outline" onClick={handleClick}>
+      {/* <Button variant="outline" onClick={handleClick}>
           See all projects
-        </Button>
+        </Button> */}
+        <p className='dark:text-[#f5f5f5] dark:text-foreground text-sm'>
+          More coming soon...
+        </p>
       </div>
     </motion.div>
   );

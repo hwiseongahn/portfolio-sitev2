@@ -5,6 +5,7 @@ import SelectedProjects from "@/components/projects";
 import Hero from "@/components/hero";
 import Head from 'next/head';
 import Image from "next/image";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <SelectedProjects />
+      <Contact />
       <Image
             width={1512}
             height={550}
