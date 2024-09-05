@@ -36,6 +36,13 @@ const projects = [
     src: '/Vibify.png',
     selected: true
   },
+  {
+    slug: 'UFC Predictor',
+    name: 'UFC Predictor',
+    description: 'Predict fight outcomes',
+    src: '/UFC.png',
+    selected: true
+  },
 ];
 
 const SelectedProjects = () => {

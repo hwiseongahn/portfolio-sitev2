@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-// Footer links constant
 const FOOTER_LINKS = [
   {
     id: 'general',
