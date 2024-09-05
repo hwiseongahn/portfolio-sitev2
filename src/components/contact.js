@@ -51,7 +51,7 @@ const Contact = () => {
               Want to contact me?
             </p>
             <p className='text-zinc-800 dark:text-zinc-300'>
-              Feel free to reach out to me!{' '}
+              Feel free to reach out!{' '}
               <span className='text-muted-foreground'>I'm always free to chat.</span>
             </p>
             <div className='my-8'>

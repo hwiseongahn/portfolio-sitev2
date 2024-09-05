@@ -1,10 +1,7 @@
 "use client"
 
-import Image from 'next/image'
-import Head from '../../public/head.png'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import cn from '@/lib/utils'
 
 const navLinks = [
   {
@@ -14,11 +11,11 @@ const navLinks = [
   {
     href: "/gallery",
     label: "Gallery",
-  }
-  // {
-  //   href: "/contacts",
-  //   label: "Contacts",
-  // },
+  },
+  {
+    href: "/Benson_Yan_2024_Resume.pdf",
+    label: "Resume",
+  },
 ]
 
 export default function Navbar() {

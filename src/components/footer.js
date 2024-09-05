@@ -20,9 +20,10 @@ const FOOTER_LINKS = [
   {
     id: 'other',
     links: [
-      { href: '/uses', text: 'Uses' },
-      { href: '/guestbook', text: 'Guestbook' },
-      { href: '/dashboard', text: 'Dashboard' },
+      { href: 'https://www.youtube.com/@Ch3mson', text: 'Youtube' },
+      { href: 'https://www.ebay.ca/usr/1_800_benson', text: 'Ebay' },
+      { href: 'https://www.facebook.com/benson.yan.520/', text: 'Facebook' },
+      { href: '/Benson_Yan_2024_Resume.pdf', text: 'Resume' },
     ]
   }
 ]
