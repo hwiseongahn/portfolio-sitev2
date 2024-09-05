@@ -8,6 +8,7 @@ import Image from 'next/image'
 import headSrc from '../../public/head.png'
 import { Separator } from "@/components/ui/separator"
 import { ModeToggle } from '@/components/ui/modeToggle'
+import MobileNav from './mobileNav'
 
 
 const Header = () => {
@@ -57,6 +58,7 @@ const Header = () => {
         <Navbar />
         <Separator orientation="vertical" className="h-6"/>
         <ModeToggle />
+        <MobileNav />
       </div>
     </motion.header>
   )

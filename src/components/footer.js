@@ -13,7 +13,7 @@ const FOOTER_LINKS = [
     id: 'social',
     links: [
       { href: 'https://www.linkedin.com/in/benson-yan-622413201/', text: 'LinkedIn' },
-      { href: 'https://twitter.com/yourusername', text: 'Twitter' },
+      { href: 'https://x.com/ch3mson', text: 'Twitter' },
       { href: 'https://www.youtube.com/@Ch3mson', text: 'Youtube' },
       { href: 'https://www.facebook.com/benson.yan.520/', text: 'Facebook' },
     ]
