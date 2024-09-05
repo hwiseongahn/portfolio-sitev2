@@ -12,17 +12,19 @@ const FOOTER_LINKS = [
   {
     id: 'social',
     links: [
-      { href: 'https://github.com/ch3mson', text: 'GitHub' },
       { href: 'https://www.linkedin.com/in/benson-yan-622413201/', text: 'LinkedIn' },
       { href: 'https://twitter.com/yourusername', text: 'Twitter' },
+      { href: 'https://www.youtube.com/@Ch3mson', text: 'Youtube' },
+      { href: 'https://www.facebook.com/benson.yan.520/', text: 'Facebook' },
     ]
   },
   {
     id: 'other',
     links: [
-      { href: 'https://www.youtube.com/@Ch3mson', text: 'Youtube' },
+      { href: 'https://github.com/ch3mson', text: 'GitHub' },
       { href: 'https://www.ebay.ca/usr/1_800_benson', text: 'Ebay' },
-      { href: 'https://www.facebook.com/benson.yan.520/', text: 'Facebook' },
+      { href: 'https://leetcode.com/u/Chemson/', text: 'Leetcode' },
+      { href: 'https://www.kaggle.com/chemson', text: 'Kaggle' },
       { href: '/Benson_Yan_2024_Resume.pdf', text: 'Resume' },
     ]
   }
