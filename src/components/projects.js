@@ -122,9 +122,9 @@ const Card = ({ project }) => {
 
   return (
     <Link
-        key={slug}
-        href={repoUrl}
-        className='shadow-feature-card dark:shadow-feature-card-dark group relative rounded-xl p-2'
+      key={slug}
+      href={repoUrl}
+      className='shadow-feature-card dark:shadow-feature-card-dark group relative rounded-xl p-2'
     >
       <div className='flex items-center justify-between p-4'>
         <div className='flex items-center gap-3'>
@@ -134,11 +134,19 @@ const Card = ({ project }) => {
         <ArrowUpRightIcon className='w-4 h-4 opacity-0 transition-opacity group-hover:opacity-100' />
       </div>
       <div className='relative w-full h-72 rounded-lg overflow-hidden'>
-        <Image width={500} height={500} src={src} alt="Picture of the author" className='rounded-lg'/>
-      </div>
-      <div className='absolute bottom-6 left-7 flex flex-col transition-[left] ease-out group-hover:left-[30px]'>
-        <h3 className='font-title text-2xl font-bold text-white'>{name}</h3>
-        <p className='dark:text-muted-foreground mt-2 text-zinc-100'>{description}</p>
+        <Image 
+          width={500} 
+          height={500} 
+          src={src} 
+          alt={name} 
+          className='rounded-lg object-cover w-full h-full'
+        />
+        <div className='absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4'>
+          <div className='transition-transform ease-out group-hover:translate-x-2'>
+            <h3 className='font-title text-xl sm:text-2xl font-bold text-white'>{name}</h3>
+            <p className='text-sm sm:text-base mt-1 text-zinc-200'>{description}</p>
+          </div>
+        </div>
       </div>
     </Link>
   );
