@@ -20,7 +20,7 @@ const navLinks = [
       label: "Gallery",
     },
     {
-      href: "/Benson_Yan_2024_Resume.pdf",
+      href: "https://drive.google.com/file/d/1GW6A-lZigkQOo7kzv13PMRUuBkRB9UiZ/view?usp=drive_link",
       label: "Resume",
     },
   ]
