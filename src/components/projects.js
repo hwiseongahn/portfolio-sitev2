@@ -23,25 +23,28 @@ const variants = {
 // Mock project data
 const projects = [
   {
+    slug: 'UFC Predictor',
+    name: 'UFC Predictor',
+    description: 'Predict fight outcomes',
+    src: '/UFC.png',
+    selected: true,
+    repoUrl: 'https://github.com/Ch3mson/ufc-predictor'
+  },
+  {
     slug: 'Word Hunt Solver',
     name: 'Word Hunt Solver',
     description: 'To cheat your word hunt games',
     src: '/WHS.png',
-    selected: true
+    selected: true,
+    repoUrl: 'https://github.com/Ch3mson/Word-Hunt-Solver'
   },
   {
     slug: 'Vibify',
     name: 'Vibify',
     description: 'Find your music discovery',
     src: '/Vibify.png',
-    selected: true
-  },
-  {
-    slug: 'UFC Predictor',
-    name: 'UFC Predictor',
-    description: 'Predict fight outcomes',
-    src: '/UFC.png',
-    selected: true
+    selected: true,
+    repoUrl: 'https://github.com/Ch3mson/Vibify'
   },
 ];
 
@@ -115,12 +118,12 @@ const SelectedProjects = () => {
 };
 
 const Card = ({ project }) => {
-  const { slug, name, description, src } = project;
+  const { slug, name, description, src, repoUrl } = project;
 
   return (
     <Link
         key={slug}
-        href={`/projects/${slug}`}
+        href={repoUrl}
         className='shadow-feature-card dark:shadow-feature-card-dark group relative rounded-xl p-2'
     >
       <div className='flex items-center justify-between p-4'>
