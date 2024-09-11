@@ -9,7 +9,7 @@
 </p>
 
 
-My personal portfolio created with Next.js, Tailwind CSS, Shadcn, and Framer Motion, deployed on Vercel.
+My personal portfolio created with Next.js, Tailwind CSS, Shadcn, v0 by Shadcn, and Framer Motion, deployed on Vercel.
 
 ### Installation
 
