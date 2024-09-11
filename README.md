@@ -32,5 +32,6 @@ My personal portfolio created with Next.js, Tailwind CSS, Shadcn, v0 by Shadcn, 
 ## Acknowledgments
 
 * [Inspiration](https://honghong.me/)
+* [UI templates](https://ui.shadcn.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
