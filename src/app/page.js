@@ -6,6 +6,7 @@ import Hero from "@/components/hero";
 import Head from 'next/head';
 import Image from "next/image";
 import Contact from "@/components/contact";
+import { Timeline } from "@/components/timeline";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <AboutMe />
+      <Timeline />
       <SelectedProjects />
       <Contact />
       <Image
