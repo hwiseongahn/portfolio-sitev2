@@ -13,7 +13,7 @@ const navLinks = [
     label: "Gallery",
   },
   {
-    href: "https://drive.google.com/file/d/1GW6A-lZigkQOo7kzv13PMRUuBkRB9UiZ/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/1U8suY4t_NSVTM6rJF2Dm5CFg78DHXyfn/view?usp=sharing",
     label: "Resume",
   },
 ]
