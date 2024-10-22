@@ -23,12 +23,12 @@ const variants = {
 // Mock project data
 const projects = [
   {
-    slug: 'UFC Predictor',
-    name: 'UFC Predictor',
+    slug: 'Bet UFC',
+    name: 'Bet UFC',
     description: 'Predict fight outcomes',
     src: '/UFC.png',
     selected: true,
-    repoUrl: 'https://github.com/Ch3mson/ufc-predictor'
+    repoUrl: 'https://ufc-client.vercel.app/'
   },
   {
     slug: 'Word Hunt Solver',
