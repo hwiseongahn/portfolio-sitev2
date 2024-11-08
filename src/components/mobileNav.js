@@ -20,7 +20,7 @@ const navLinks = [
       label: "Gallery",
     },
     {
-      href: "https://drive.google.com/file/d/15Ys4qG7BSjePdWrabr0BhV2vFVMzgt-i/view?usp=sharing",
+      href: "/resume.pdf",
       label: "Resume",
     },
   ]
