@@ -29,14 +29,19 @@ export function Timeline() {
 
   const timelineEvents = [
     {
+      year: "2025",
+      title: "Advanced Building Innovation Company",
+      description: "Software Engineer Intern"
+    },
+    {
       year: "2024",
       title: "Cornerstone Marketing Realty",
-      description: "Business Analyst"
+      description: "Business Analyst Intern"
     },
     {
       year: "2023",
       title: "Waterloo Aerial Robotics Group",
-      description: "Autonomy Member"
+      description: "Autonomy Software Developer"
     },
     {
       year: "2023",
