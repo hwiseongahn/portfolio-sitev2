@@ -9,10 +9,13 @@ const CodingHours = () => {
     const fetchData = async () => {
       try {
         const response = await fetch('https://wakatime.com/share/@Ch3mson/454e48bd-9913-410c-8cdf-bac1cf07502e.json');
-        const jsonData = await response.json(); // Ensure you await the json() method.
-        console.log(jsonData)
-        setData(jsonData.data); // Corrected the path to access the data.
-        setStatus('success');
+        const jsonData = await response.json();
+        if (jsonData && jsonData.data) {
+          setData(jsonData.data);
+          setStatus('success');
+        } else {
+          setStatus('error');
+        }
       } catch (error) {
         console.error('Error fetching Wakatime data:', error);
         setStatus('error');
@@ -29,7 +32,7 @@ const CodingHours = () => {
         <h2 className='text-sm font-light'>Coding hours (since September 2024 with this plugin active)</h2>
       </div>
       <div className='font-title flex grow items-center justify-center text-4xl font-semibold'>
-        {Math.round(data.grand_total.total_seconds/3600)} Hours
+        {data ? Math.round(data.grand_total.total_seconds/3600) : 0 } Hours
       </div>
     </div>
   )
