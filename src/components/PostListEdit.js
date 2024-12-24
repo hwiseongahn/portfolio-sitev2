@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Trash, Pencil } from 'lucide-react';
 import { deletePost, updatePost } from "@/app/actions/actions";
+import ReactMarkdown from 'react-markdown';
 
 export default function PostsList({ posts }) {
     // State variables for managing modals and selected post
@@ -92,7 +93,7 @@ export default function PostsList({ posts }) {
                         </div>
                     </div>
                     <div className="collapse-content">
-                        <p>{post.content}</p>
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
                     </div>
                 </div>
             ))}
