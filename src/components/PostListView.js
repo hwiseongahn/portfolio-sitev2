@@ -10,7 +10,7 @@ export default function PostsListView({ posts }) {
                         {post.title}
                     </div>
                     <div className="collapse-content">
-                        <p>{post.content}</p>
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
                     </div>
                 </div>
             ))}
