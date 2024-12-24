@@ -93,7 +93,7 @@ export function Timeline() {
       >
         {timelineEvents.map((event, index) => (
           <motion.div
-            key={event.year}
+          key={`${event.year}-${index}`}
             className="flex items-start gap-4 w-full"
             variants={variants}
             transition={{

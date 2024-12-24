@@ -6,6 +6,9 @@ const FOOTER_LINKS = [
     links: [
       { href: '/', text: 'Home' },
       { href: '/gallery', text: 'Gallery' },
+      { href: '/blog', text: 'Blog' },
+      { href: '/api/auth/signin', text: 'Login' },
+      { href: '/api/auth/signout', text: 'Logout' },
     ]
   },
   {
