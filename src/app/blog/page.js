@@ -10,20 +10,20 @@ export default async function page() {
 
     try {
         const posts = await db.query.postsTable.findMany();
-        posts.reverse(); // Reverse the posts array for newest-first order
+        posts.reverse();
         console.log("posts:", posts);
 
 
         if (session && session.user.email === process.env.PRIVATE_EMAIL) {
             return (
-                <div className="max-w-4xl mx-auto p-4">
+                <div className="max-w-4xl mx-auto p-4 min-h-screen">
                     <CreatePostForm />
                     <PostsList posts={posts} />
                 </div>
             );
         } else {
             return (
-                <div className="max-w-4xl mx-auto p-4">
+                <div className="max-w-4xl mx-auto p-4 min-h-screen">
                     <PostsListView posts={posts} />
                 </div>
             );
