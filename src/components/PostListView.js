@@ -1,5 +1,7 @@
 "use client";
 
+import ReactMarkdown from 'react-markdown';
+
 export default function PostsListView({ posts }) {
     return (
         <div className="space-y-6">
