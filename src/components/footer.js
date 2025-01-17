@@ -27,7 +27,7 @@ const FOOTER_LINKS = [
       { href: 'https://www.ebay.ca/usr/1_800_benson', text: 'Ebay' },
       { href: 'https://leetcode.com/u/Chemson/', text: 'Leetcode' },
       { href: 'https://www.kaggle.com/chemson', text: 'Kaggle' },
-      { href: '/Benson_Yan_2024_Resume.pdf', text: 'Resume' },
+      { href: '/resume.pdf', text: 'Resume' },
     ]
   }
 ]
