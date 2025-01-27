@@ -23,6 +23,14 @@ const variants = {
 // Mock project data
 const projects = [
   {
+    slug: 'Veyesor',
+    name: 'Veyesor',
+    description: 'View stitched videos in VR from OpenCV',
+    src: '/Veyesor.png',
+    selected: true,
+    repoUrl: 'https://github.com/krishchopra/veyesor'
+  },
+  {
     slug: 'Bet UFC',
     name: 'Bet UFC',
     description: 'Predict fight outcomes',
