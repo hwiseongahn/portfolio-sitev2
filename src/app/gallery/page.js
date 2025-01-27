@@ -3,6 +3,26 @@ import Image from "next/image";
 import { ImageGallery } from "react-image-grid-gallery";
 
 const imagesArray = [
+  {
+    alt: "Fahmi's bed",
+    caption: "Fahmi's bed",
+    src: "/photos/p14c.png",
+  },
+  {
+    alt: "Montreal part 2",
+    caption: "Montreal part 2",
+    src: "/photos/p13c.png",
+  },
+  {
+    alt: "Montreal part 1",
+    caption: "Montreal part 1",
+    src: "/photos/p12c.png",
+  },
+  {
+    alt: "Became Toronto's #1 most normal person",
+    caption: "Became Toronto's #1 most normal person",
+    src: "/photos/p11c.png",
+    },
     {
     alt: "it's 3am",
     caption: "dehydrated at 3am",
@@ -25,19 +45,14 @@ const imagesArray = [
     },
     {
      alt: "North York",
-     caption: "north york!!",
-     src: "/photos/p6c.png",
-    },
-    {
-     alt: "FAHMI",
-     caption: "FAHMI",
-     src: "/photos/p5c.png",
-    },
-    {
-     alt: "first coop",
-     caption: "first coop",
-     src: "/photos/p4c.png",
-    },
+    caption: "north york!!",
+    src: "/photos/p6c.png",
+  },
+  {
+    alt: "first coop",
+    caption: "first coop",
+    src: "/photos/p4c.png",
+  },
     {
       alt: "mukbang",
       caption: "mukbanging",

@@ -117,9 +117,6 @@ const SelectedProjects = () => {
       {/* <Button variant="outline" onClick={handleClick}>
           See all projects
         </Button> */}
-        <p className='dark:text-[#f5f5f5] dark:text-foreground text-sm'>
-          More coming soon...
-        </p>
       </div>
     </motion.div>
   );
