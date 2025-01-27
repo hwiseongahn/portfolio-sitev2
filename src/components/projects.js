@@ -25,7 +25,7 @@ const projects = [
   {
     slug: 'Veyesor',
     name: 'Veyesor',
-    description: 'View stitched videos in VR from OpenCV',
+    description: 'McHacks 2025 winner',
     src: '/Veyesor.png',
     selected: true,
     repoUrl: 'https://github.com/krishchopra/veyesor'
