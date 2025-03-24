@@ -10,6 +10,11 @@ export const authOptions = {
       })
     // ...add more providers here
   ],
+  callbacks: {
+    async signIn({ user }) {
+      return user.email === process.env.PRIVATE_EMAIL;
+    }
+  }
 };
 
 export const handler = NextAuth(authOptions);

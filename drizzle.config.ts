@@ -1,14 +1,18 @@
-import { config } from 'dotenv';
-import { defineConfig } from 'drizzle-kit';
+import type { Config } from 'drizzle-kit';
+import * as dotenv from 'dotenv';
 
-config({ path: '.env.local' });
+// Load environment variables from .env.local
+dotenv.config({ path: '.env.local' });
 
-export default defineConfig({
+if (!process.env.DATABASE_URL) {
+  throw new Error('DATABASE_URL is not set in .env.local');
+}
+
+export default {
   schema: './src/db/schema.ts',
-  out: './migrations',
-  dialect: 'turso',
+  out: './drizzle',
+  dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.TURSO_CONNECTION_URL!,
-    authToken: process.env.TURSO_AUTH_TOKEN!,
+    url: process.env.DATABASE_URL,
   },
-});
+} satisfies Config;

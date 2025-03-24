@@ -1,20 +1,27 @@
 'use server';
 
-import { db } from '@/db';
-import { postsTable, usersTable } from '@/db/schema';
+import { db } from '@/db/index';
+import { blogTable, usersTable } from '@/db/schema';
 import { revalidatePath } from 'next/cache';
 import { eq } from 'drizzle-orm';
+import { getServerSession } from 'next-auth/next';
 
 export async function createPost(data) {
   try {
+    // Get the current session
+    const session = await getServerSession();
+    
+    // Check if user is authorized
+    if (!session || session.user.email !== process.env.PRIVATE_EMAIL) {
+      throw new Error('Unauthorized access');
+    }
 
     const { title, content } = data;
     if (!title || !content) {
       throw new Error('Title and content are required');
     }
 
-    // Insert post
-    await db.insert(postsTable).values({
+    await db.insert(blogTable).values({
       title,
       content,
     });
@@ -28,7 +35,7 @@ export async function createPost(data) {
 
 export async function deletePost(id) {
     try {
-        await db.delete(postsTable).where(eq(postsTable.id, id));
+        await db.delete(blogTable).where(eq(blogTable.id, id));
         revalidatePath('/blog');
     } catch (error) {
         console.error('Error deleting post:', error);
@@ -38,7 +45,7 @@ export async function deletePost(id) {
 
 export async function updatePost(id, title, content) {
     try {
-        await db.update(postsTable).set({ title, content }).where(eq(postsTable.id, id));
+        await db.update(blogTable).set({ title, content }).where(eq(blogTable.id, id));
         revalidatePath('/blog');
     } catch (error) {
         console.error('Error updating post:', error);
