@@ -23,6 +23,22 @@ const variants = {
 // Mock project data
 const projects = [
   {
+    slug: 'Rizz Glasses',
+    name: 'Rizz Glasses',
+    description: 'Carleton 2025 Hackathon',
+    src: '/rizz.jpg',
+    selected: true,
+    repoUrl: 'https://github.com/Ch3mson/RizzKhalifa'
+  },
+  {
+    slug: 'Cook or Cooked',
+    name: 'Cook or Cooked',
+    description: 'GenAI Genesis 2025 Hackathon',
+    src: '/cooked.jpg',
+    selected: true,
+    repoUrl: 'https://github.com/rodnnnney/cook_or_cooked'
+  },
+  {
     slug: 'Veyesor',
     name: 'Veyesor',
     description: 'McHacks 2025 winner',
@@ -37,23 +53,7 @@ const projects = [
     src: '/UFC.png',
     selected: true,
     repoUrl: 'https://ufc-client.vercel.app/'
-  },
-  {
-    slug: 'Word Hunt Solver',
-    name: 'Word Hunt Solver',
-    description: 'To cheat your word hunt games',
-    src: '/WHS.png',
-    selected: true,
-    repoUrl: 'https://github.com/Ch3mson/Word-Hunt-Solver'
-  },
-  {
-    slug: 'Vibify',
-    name: 'Vibify',
-    description: 'Find your music discovery',
-    src: '/Vibify.png',
-    selected: true,
-    repoUrl: 'https://github.com/Ch3mson/Vibify'
-  },
+  }
 ];
 
 const SelectedProjects = () => {
