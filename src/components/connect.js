@@ -18,16 +18,6 @@ const SOCIAL_LINKS = [
     title: 'Instagram',
     icon: SiInstagram
   },
-  {
-    href: "https://x.com/ch3mson",
-    title: 'X',
-    icon: SiX
-  },
-  {
-    href: "https://www.youtube.com/@Ch3mson",
-    title: 'YouTube',
-    icon: SiYoutube
-  }
 ]
 
 const Connect = () => {
