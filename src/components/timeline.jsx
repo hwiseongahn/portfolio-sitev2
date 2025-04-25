@@ -132,8 +132,7 @@ export function Timeline() {
                         <Image
                           src={event.logo}
                           alt={`${event.title} logo`}
-                          width={100}
-                          height={100}
+                          height={108}
                           className='mt-8'
                         />
                       </div>
@@ -147,7 +146,7 @@ export function Timeline() {
                             <Image
                             src={event.logo}
                             alt={`${event.title} logo`}
-                            height={100}
+                            height={108}
                             className='mt-8'
                             />
                       </div>

@@ -133,7 +133,7 @@ const Card = ({ project }) => {
     >
       <div className='flex items-center justify-between p-4'>
         <div className='flex items-center gap-3'>
-          <LightbulbIcon className='w-4 h-4' />
+          <LightbulbIcon className='w-4 h-4'/>
           <h2 className='font-light dark:text-neutral-100'>Project</h2>
         </div>
         <ArrowUpRightIcon className='w-4 h-4 opacity-0 transition-opacity group-hover:opacity-100' />

@@ -9,10 +9,6 @@ const navLinks = [
     label: "Home",
   },
   {
-    href: "/blog",
-    label: "Blog"
-  },
-  {
     href: "/gallery",
     label: "Gallery",
   },

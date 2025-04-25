@@ -56,10 +56,10 @@ const Contact = () => {
             </p>
             <div className='my-8'>
                 <a
-                    href='mailto:bensonyan778@hotmail.com'
+                    href='mailto:hwiseonga@dal.ca'
                     className='bg-email-button rounded-full px-4 py-2 text-sm text-white'
                 >
-                    bensonyan778@hotmail.com
+                    hwiseonga@dal.ca
                 </a>
                 </div>
           </div>

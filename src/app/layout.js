@@ -10,8 +10,8 @@ import SessionProvider from "@/components/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Benson Yan Portfolio",
-  description: "Bensons Portfolio",
+  title: "Hwiseong Ahn",
+  description: "Hwiseong's Portfolio",
 };
 
 export const viewport = {
