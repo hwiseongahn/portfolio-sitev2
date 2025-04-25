@@ -2,13 +2,17 @@ import createGlobe from 'cobe'
 import { MapPinIcon } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 import { useSpring } from 'react-spring'
+import { useState } from 'react'
 
 const LocationCard = () => {
   const canvasRef = useRef(null)
   const pointerInteracting = useRef(null)
   const pointerInteractionMovement = useRef(0)
   const fadeMask = 'radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 60%, rgb(0, 0, 0, 0) 70%)'
-
+  const locationToAngles = (lat, long) => {
+    return [Math.PI - ((long * Math.PI) / 180 - Math.PI / 2), ((lat * Math.PI) / 180) - 0.2]
+  }
+  const focusRef = useRef([0, 0.5])
   const [{ r }, api] = useSpring(() => ({
     r: 0,
     config: {
@@ -21,51 +25,75 @@ const LocationCard = () => {
 
 
   useEffect(() => {
-    let width = 0
-
+    let width = 0;
+    let currentPhi = 0;
+    let currentTheta = 0;
+    const doublePi = Math.PI * 2;
     const onResize = () => {
       if (canvasRef.current && (width = canvasRef.current.offsetWidth)) {
         window.addEventListener('resize', onResize)
       }
     }
     onResize()
-
-    if (!canvasRef.current) return
-
     const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: width * 2,
-      height: width * 2,
-      phi: 0,
-      theta: 0,
-      dark: 1,
-      diffuse: 2,
-      mapSamples: 12000,
-      mapBrightness: 2,
-      baseColor: [0.8, 0.8, 0.8],
-      markerColor: [1, 1, 1],
-      glowColor: [0.5, 0.5, 0.5],
-      markers: [{ location: [43.4643, -80.5204], size: 0.1 }, { location: [44.6509, -63.5752], size: 0.1 }],
-      scale: 1.05,
-      onRender: (state) => {
-        state.phi = 12.3 + r.get()
-        state.width = width * 2
-        state.height = width * 2
+        devicePixelRatio: 2,
+        width: width * 2,
+        height: width * 2,
+        phi: 0,
+        theta: 0,
+        dark: 1,
+        diffuse: 3,
+        mapSamples: 16000,
+        mapBrightness: 1.2,
+        baseColor: [1, 1, 1],
+        markerColor: [251 / 255, 200 / 255, 21 / 255],
+        glowColor: [1.2, 1.2, 1.2],
+        markers: [
+          { location: [43.4679, -80.5373], size: 0.1},
+          { location: [44.6509, -63.5923], size: 0.1},
+          { location: [35.676, 139.65], size: 0.1},
+          { location: [-34.60, -58.38], size: 0.1},
+        ],
+        onRender: (state) => {
+          state.phi = currentPhi
+          state.theta = currentTheta
+          const [focusPhi, focusTheta] = focusRef.current
+          const distPositive = (focusPhi - currentPhi + doublePi) % doublePi
+          const distNegative = (currentPhi - focusPhi + doublePi) % doublePi
+          // Control the speed
+          if (distPositive < distNegative) {
+            currentPhi += distPositive * 0.08
+          } else {
+            currentPhi -= distNegative * 0.08
+          }
+          currentTheta = currentTheta * 0.92 + focusTheta * 0.08
+          state.width = width * 2
+          state.height = width * 2
+        }
+      })
+      setTimeout(() => canvasRef.current.style.opacity = '1')
+      return () => { 
+        globe.destroy();
+        window.removeEventListener('resize', onResize);
       }
-    })
+    }, [])
 
-    return () => {
-      globe.destroy()
-      window.removeEventListener('resize', onResize)
-    }
-  }, [r])
-
+    const [locationName, setLocationName] = useState('Halifax, Nova Scotia');
   return (
     <div className='shadow-feature-card dark:shadow-feature-card-dark relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl p-4 lg:p-6'>
-        
       <div className='flex items-center gap-2'>
         <MapPinIcon className='size-[18px]' />
-        <h2 className='text-sm font-light'>Halifax, Nova Scotia</h2>
+        <h2 className='text-sm font-light'>{locationName}</h2>
+        <button onClick={() => {focusRef.current = locationToAngles(43.4679, -80.5373);
+            setLocationName('Waterloo, Ontario')
+        }}>
+            📍 School
+        </button>
+        <button onClick={() => {focusRef.current = locationToAngles(44.6509, -63.5923);
+            setLocationName('Halifax, Nova Scotia');
+        }}>
+            📍 Home
+        </button>
       </div>
       <div className='absolute inset-x-0 bottom-[-190px] mx-auto aspect-square h-[388px] [@media(max-width:420px)]:bottom-[-140px] [@media(max-width:420px)]:h-[320px] [@media(min-width:768px)_and_(max-width:858px)]:h-[350px]'>
         <div
@@ -127,6 +155,7 @@ const LocationCard = () => {
                 userSelect: 'none'
               }}
             />
+            
           </div>
         </div>
       </div>
