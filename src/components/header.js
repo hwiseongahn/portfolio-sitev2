@@ -9,6 +9,7 @@ import headSrc from '../../public/head.png'
 import { Separator } from "@/components/ui/separator"
 import { ModeToggle } from '@/components/ui/modeToggle'
 import MobileNav from './mobileNav'
+import { LangToggle } from '@/components/ui/langToggle'
 
 
 const Header = () => {
@@ -55,9 +56,10 @@ const Header = () => {
         <Image src={headSrc} alt="Logo" width={40} height={40} />
       </Link>
       <div className='flex items-center gap-2'>
-        <Navbar />
+        <Navbar/>
         <Separator orientation="vertical" className="h-6"/>
-        <ModeToggle />
+        <ModeToggle/>
+        <LangToggle/>
         <MobileNav />
       </div>
     </motion.header>

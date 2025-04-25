@@ -6,9 +6,7 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 
 // Placeholder components
-import CodingHours from './codingHours'
 import Connect from './connect';
-import FavoriteFramework from './favouriteFramework';
 import LocationCard from './locationCard'
 import StacksCard from './stacksCard'
 import { useRouter } from 'next/navigation';
@@ -82,8 +80,6 @@ const AboutMe = () => {
         <div className="grid gap-4">
           <Connect />
           <div className="grid gap-4 [@media(min-width:450px)]:grid-cols-2">
-            <CodingHours />
-            <FavoriteFramework />
           </div>
         </div>
       </motion.div>
