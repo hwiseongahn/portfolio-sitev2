@@ -1,7 +1,13 @@
 'use client'
 
 import React, { useRef } from 'react';
+import { useTheme } from 'next-themes';
+import DalLogoDark from '../../public/dal_logo_dark.png';
+import DalLogoLight from '../../public/dal_logo_light.webp';
+import UWLogo from '../../public/uw_logo.png';
+import HCI4GoodLogo from '../../public/hci4good.png';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 const variants = {
   initial: {
@@ -26,27 +32,26 @@ const cardVariants = {
 export function Timeline() {
   const timelineRef = useRef(null);
   const isInView = useInView(timelineRef, { once: true, margin: '-100px' });
+  const { theme } = useTheme();
 
   const timelineEvents = [
     {
-      year: "2025",
-      title: "Brandey.ai",
-      description: "Founding Engineer"
-    },
-    {
-      year: "2025",
-      title: "ABIC",
-      description: "Software Engineer Intern"
-    },
-    {
-      year: "2024",
-      title: "Cornerstone Marketing Realty",
-      description: "Business Analyst Intern"
-    },
-    {
-      year: "2023",
+      year: "September 2025",
       title: "University of Waterloo",
-      description: "Bachelors of Computer Science"
+      description: "Bachelor of Software Engineering",
+      logo : UWLogo
+    },
+    {
+      year: "June 2024",
+      title: "HCI4Good",
+      description: "Full-Stack Software Developer Intern",
+      logo : HCI4GoodLogo
+    },
+    {
+      year: "September 2023",
+      title: "Dalhousie University",
+      description: "Bachelor of Computer Science",
+      logo : theme === 'dark' ? DalLogoDark : DalLogoLight
     }
   ];
 
@@ -123,14 +128,29 @@ export function Timeline() {
                           </p>
                         </motion.div>
                       </div>
-                      <div className="w-1/2 pl-12"></div>
+                      <div className="w-1/2 pl-10">
+                        <Image
+                          src={event.logo}
+                          alt={`${event.title} logo`}
+                          width={100}
+                          height={100}
+                          className='mt-8'
+                        />
+                      </div>
                     </>
                   )}
                   
                   {/* Right side content (odd indices) */}
                   {!isEven && (
                     <>
-                      <div className="w-1/2 pr-12"></div>
+                      <div className="w-1/2 pr-12 flex justify-end">
+                            <Image
+                            src={event.logo}
+                            alt={`${event.title} logo`}
+                            height={100}
+                            className='mt-8'
+                            />
+                      </div>
                       <div className="w-1/2 pl-12">
                         <div className="mb-2">
                           <span className="text-sm font-semibold inline-block border-b border-gray-300 dark:border-gray-300 pb-1 px-3">
