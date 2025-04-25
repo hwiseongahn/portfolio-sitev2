@@ -3,6 +3,7 @@ import { MapPinIcon } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 import { useSpring } from 'react-spring'
 import { useState } from 'react'
+import { Button } from "@/components/ui/button"
 
 const LocationCard = () => {
   const canvasRef = useRef(null)
@@ -81,19 +82,29 @@ const LocationCard = () => {
     const [locationName, setLocationName] = useState('Halifax, Nova Scotia');
   return (
     <div className='shadow-feature-card dark:shadow-feature-card-dark relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl p-4 lg:p-6'>
-      <div className='flex items-center gap-2'>
-        <MapPinIcon className='size-[18px]' />
-        <h2 className='text-sm font-light'>{locationName}</h2>
-        <button onClick={() => {focusRef.current = locationToAngles(43.4679, -80.5373);
+      <div className='flex justify-between items-center gap-2'>
+        <div className='flex items-center gap-2'>
+          <MapPinIcon className='size-[18px]' />
+          <h2 className='text-sm font-light'>{locationName}</h2>
+        </div>
+        <div className='text-sm font-light flex flex-row gap-2'>
+          <Button onClick={() => {focusRef.current = locationToAngles(43.4679, -80.5373);
             setLocationName('Waterloo, Ontario')
-        }}>
-            📍 School
-        </button>
-        <button onClick={() => {focusRef.current = locationToAngles(44.6509, -63.5923);
+            }}
+            variant='outline'
+          >
+           School📍
+          </Button>
+          <Button onClick={() => {focusRef.current = locationToAngles(44.6509, -63.5923);
             setLocationName('Halifax, Nova Scotia');
-        }}>
-            📍 Home
-        </button>
+            }}
+            className='text-right'
+            variant='outline'
+          > 
+           Home📍
+           
+          </Button>
+        </div>
       </div>
       <div className='absolute inset-x-0 bottom-[-190px] mx-auto aspect-square h-[388px] [@media(max-width:420px)]:bottom-[-140px] [@media(max-width:420px)]:h-[320px] [@media(min-width:768px)_and_(max-width:858px)]:h-[350px]'>
         <div
@@ -117,36 +128,6 @@ const LocationCard = () => {
           >
             <canvas
               ref={canvasRef}
-              onPointerDown={(e) => {
-                pointerInteracting.current = e.clientX - pointerInteractionMovement.current
-                canvasRef.current && (canvasRef.current.style.cursor = 'grabbing')
-              }}
-              onPointerUp={() => {
-                pointerInteracting.current = null
-                canvasRef.current && (canvasRef.current.style.cursor = 'grab')
-              }}
-              onPointerOut={() => {
-                pointerInteracting.current = null
-                canvasRef.current && (canvasRef.current.style.cursor = 'grab')
-              }}
-              onMouseMove={(e) => {
-                if (pointerInteracting.current !== null) {
-                  const delta = e.clientX - pointerInteracting.current
-                  pointerInteractionMovement.current = delta
-                  void api.start({
-                    r: delta / 200
-                  })
-                }
-              }}
-              onTouchMove={(e) => {
-                if (pointerInteracting.current !== null && e.touches[0]) {
-                  const delta = e.touches[0].clientX - pointerInteracting.current
-                  pointerInteractionMovement.current = delta
-                  void api.start({
-                    r: delta / 100
-                  })
-                }
-              }}
               style={{
                 width: '100%',
                 height: '100%',
