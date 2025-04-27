@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import DalLogoDark from '../../public/dal_logo_dark.png';
 import DalLogoLight from '../../public/dal_logo_light.webp';
@@ -32,27 +32,34 @@ const cardVariants = {
 export function Timeline() {
   const timelineRef = useRef(null);
   const isInView = useInView(timelineRef, { once: true, margin: '-100px' });
-  const { resolvedTheme: theme } = useTheme();
-  const timelineEvents = [
-    {
-      year: "September 2025",
-      title: "University of Waterloo",
-      description: "Bachelor of Software Engineering",
-      logo : UWLogo
-    },
-    {
-      year: "June 2024",
-      title: "HCI4Good",
-      description: "Full-Stack Software Developer Intern",
-      logo : HCI4GoodLogo
-    },
-    {
-      year: "September 2023",
-      title: "Dalhousie University",
-      description: "Bachelor of Computer Science",
-      logo : theme == 'dark' ? DalLogoDark : DalLogoLight
-    }
-  ];
+  const { theme, resolvedTheme } = useTheme();
+
+  const currentTheme = theme === 'system' ? resolvedTheme : theme;
+
+const [timelineEvents, setTimelineEvents] = useState([]);
+
+useEffect(() => {
+    setTimelineEvents([
+        {
+            year: "September 2025",
+            title: "University of Waterloo",
+            description: "Bachelor of Software Engineering",
+            logo: UWLogo
+        },
+        {
+            year: "June 2024",
+            title: "HCI4Good",
+            description: "Full-Stack Software Developer Intern",
+            logo: HCI4GoodLogo
+        },
+        {
+            year: "September 2023",
+            title: "Dalhousie University",
+            description: "Bachelor of Computer Science",
+            logo: currentTheme === 'dark' ? DalLogoDark : DalLogoLight
+        }
+    ]);
+}, [currentTheme]);
 
   return (
     <motion.div
