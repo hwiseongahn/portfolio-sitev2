@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion, useAnimate, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import me from '../../public/mendarsh.jpg'
+import me from '../../public/meanddarsh.jpg'
 
 const variants = {
   initial: {
