@@ -32,8 +32,7 @@ const cardVariants = {
 export function Timeline() {
   const timelineRef = useRef(null);
   const isInView = useInView(timelineRef, { once: true, margin: '-100px' });
-  const { theme } = useTheme();
-
+  const { resolvedTheme: theme } = useTheme();
   const timelineEvents = [
     {
       year: "September 2025",
@@ -51,7 +50,7 @@ export function Timeline() {
       year: "September 2023",
       title: "Dalhousie University",
       description: "Bachelor of Computer Science",
-      logo : theme === 'dark' ? DalLogoDark : DalLogoLight
+      logo : theme == 'dark' ? DalLogoDark : DalLogoLight
     }
   ];
 
