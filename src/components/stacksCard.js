@@ -2,7 +2,7 @@
 
 import React from 'react';
 import * as SimpleIcons from 'react-icons/si';
-import { Zap } from 'lucide-react';
+import {Zap} from 'lucide-react';
 
 const CustomMarquee = ({ children, reverse, className }) => {
     return (
@@ -36,12 +36,14 @@ const StacksCard = () => {
       <CustomMarquee className='py-4'>
         {icons.slice(0, 10).map((icon, index) => {
           const IconComponent = SimpleIcons[icon];
+          if (!IconComponent) return null; 
           return <IconComponent key={index} className='size-10' />;
         })}
       </CustomMarquee>
       <CustomMarquee className='py-4' reverse>
         {icons.slice(10).map((icon, index) => {
           const IconComponent = SimpleIcons[icon];
+          if (!IconComponent) return null; 
           return <IconComponent key={index} className='size-10' />;
         })}
       </CustomMarquee>

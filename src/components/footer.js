@@ -58,7 +58,8 @@ const Footer = () => {
             <Image
               src={isDark ? 'https://cs.uwatering.com/icon.white.svg' : 'https://cs.uwatering.com/icon.black.svg'}
               alt='CS Webring'
-              style={{ width: '24px', height: 'auto', opacity: 0.8 }}
+              width={24}
+              height={24}
             />
           </a>
           <a href='https://cs.uwatering.com/#https://www.1800benson.ca/?nav=next' className='text-foreground'>→</a>
