@@ -6,7 +6,6 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowUpRightIcon, LightbulbIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Button } from "@/components/ui/button"
 
 
 const variants = {
@@ -23,34 +22,34 @@ const variants = {
 // Mock project data
 const projects = [
   {
-    slug: 'Rizz Glasses',
-    name: 'Rizz Glasses',
-    description: 'Carleton 2025 Hackathon',
+    slug: 'SummBot',
+    name: 'SummBot',
+    description: 'Discord bot for summarizing conversations',
     src: '/rizz.jpg',
     selected: true,
     repoUrl: 'https://github.com/Ch3mson/RizzKhalifa'
   },
   {
-    slug: 'Cook or Cooked',
-    name: 'Cook or Cooked',
-    description: 'GenAI Genesis 2025 Hackathon',
+    slug: 'Algae and CO2',
+    name: 'Algae and CO₂ Heat Map',
+    description: 'NASA Space Apps Challenge 2024',
     src: '/cooked.jpg',
     selected: true,
     repoUrl: 'https://github.com/rodnnnney/cook_or_cooked'
   },
   {
-    slug: 'Veyesor',
-    name: 'Veyesor',
-    description: 'McHacks 2025 winner',
-    src: '/Veyesor.png',
+    slug: 'ClearCal',
+    name: 'ClearCal',
+    description: 'Mental Health and Generative AI Hackathon',
+    src: '/clearcal.png',
     selected: true,
     repoUrl: 'https://github.com/krishchopra/veyesor'
   },
   {
-    slug: 'Bet UFC',
-    name: 'Bet UFC',
-    description: 'Predict fight outcomes',
-    src: '/UFC.png',
+    slug: 'More',
+    name: 'Stay Tuned!',
+    description: 'more to come soon...',
+    src: '/',
     selected: true,
     repoUrl: 'https://ufc-client.vercel.app/'
   }
