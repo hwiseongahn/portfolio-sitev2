@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 const FOOTER_LINKS = [
   {
@@ -54,7 +55,7 @@ const Footer = () => {
         <div className='flex items-center gap-2'>
           <a href='https://cs.uwatering.com/#https://www.1800benson.ca/?nav=prev' className='text-foreground'>←</a>
           <a href='https://cs.uwatering.com/#https://www.1800benson.ca/' target='_blank'>
-            <img
+            <Image
               src={isDark ? 'https://cs.uwatering.com/icon.white.svg' : 'https://cs.uwatering.com/icon.black.svg'}
               alt='CS Webring'
               style={{ width: '24px', height: 'auto', opacity: 0.8 }}

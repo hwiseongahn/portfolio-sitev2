@@ -175,7 +175,7 @@ export default function PostsList({ posts }) {
                         </div>
                         <div className="p-6">
                             <p className="text-muted-foreground mb-6">
-                                Are you sure you want to delete the post titled "{selectedPost.title}"?
+                                Are you sure you want to delete the post titled `{selectedPost.title}`?
                             </p>
                             <div className="flex justify-end space-x-2">
                                 <Button variant="secondary" onClick={resetFormFields}>
