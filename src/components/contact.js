@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion, useAnimate, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import me from '../../public/me.jpg'
+import me from '../../public/mendarsh.jpg'
 
 const variants = {
   initial: {
@@ -39,9 +39,9 @@ const Contact = () => {
           <div className='relative size-64 max-md:mx-auto'>
             <Image
               src={me}
-              width={160}
-              height={160}
-              className='absolute left-1/2 top-1/2 size-48 -translate-x-1/2 -translate-y-1/2 rounded-[20px]'
+              width={256}
+              height={256}
+              className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px]'
               alt='Me'
             />
           </div>
