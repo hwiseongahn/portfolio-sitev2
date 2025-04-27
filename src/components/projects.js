@@ -23,17 +23,17 @@ const variants = {
 // Mock project data
 const projects = [
   {
-    slug: 'Rizz Glasses',
-    name: 'Rizz Glasses',
-    description: 'Carleton 2025 Hackathon',
+    slug: 'SummBot',
+    name: 'SummBot',
+    description: 'Discord bot for summarizing conversations',
     src: '/rizz.jpg',
     selected: true,
     repoUrl: 'https://github.com/Ch3mson/RizzKhalifa'
   },
   {
-    slug: 'Cook or Cooked',
-    name: 'Cook or Cooked',
-    description: 'GenAI Genesis 2025 Hackathon',
+    slug: 'Algae and CO2',
+    name: 'Algae and CO₂ Heat Map',
+    description: 'NASA Space Apps Challenge 2024',
     src: '/cooked.jpg',
     selected: true,
     repoUrl: 'https://github.com/rodnnnney/cook_or_cooked'
