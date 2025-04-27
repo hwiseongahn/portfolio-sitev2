@@ -25,7 +25,7 @@ const projects = [
     slug: 'SummBot',
     name: 'SummBot',
     description: 'Discord bot for summarizing conversations',
-    src: '/rizz.jpg',
+    src: '/summbotss.jpg',
     selected: true,
     repoUrl: 'https://github.com/Ch3mson/RizzKhalifa'
   },
@@ -33,9 +33,9 @@ const projects = [
     slug: 'Algae and CO2',
     name: 'Algae and CO₂ Heat Map',
     description: 'NASA Space Apps Challenge 2024',
-    src: '/cooked.jpg',
+    src: '/co2ss.png',
     selected: true,
-    repoUrl: 'https://github.com/rodnnnney/cook_or_cooked'
+    repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
   },
   {
     slug: 'ClearCal',
