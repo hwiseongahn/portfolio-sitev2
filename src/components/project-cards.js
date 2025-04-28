@@ -14,12 +14,12 @@ const ProjectCards = ({projects = []}) => {
 }
 
 const ProjectCard = (project) => {
-  const { name, description, techstack, slug } = project
+  const { name, description, techstack, slug, src } = project
 
   return (
     <Link href={`/projects/${slug}`} className='shadow-feature-card group rounded-xl px-2 py-4'>
       <Image
-        src={`/images/projects/${slug}/cover.png`}
+        src={`/${src}`}
         width={1280}
         height={832}
         imageClassName='group-hover:scale-105'
