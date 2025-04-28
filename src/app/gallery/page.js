@@ -10,7 +10,7 @@ const imagesArray = [
   },
 ];
 
-export default function page() {
+export default function Gallery() {
   return (
     <main>
         <ImageGallery
@@ -30,6 +30,5 @@ export default function page() {
             priority
           />
     </main>
-    
   )
 }

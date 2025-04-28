@@ -61,7 +61,7 @@ useEffect(() => {
             logo: isDark ? DalLogoDark : DalLogoLight
         }
     ])
-});
+}, [isDark]);
 
   return (
     <motion.div
