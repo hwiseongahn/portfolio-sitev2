@@ -27,7 +27,7 @@ const projects = [
     description: 'Discord bot for summarizing conversations',
     src: '/summbotss.jpg',
     selected: true,
-    repoUrl: 'https://github.com/Ch3mson/RizzKhalifa'
+    repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
   },
   {
     slug: 'Algae and CO2',
@@ -41,9 +41,9 @@ const projects = [
     slug: 'ClearCal',
     name: 'ClearCal',
     description: 'Mental Health and Generative AI Hackathon',
-    src: '/clearcal.png',
+    src: '/ClearCal.png',
     selected: true,
-    repoUrl: 'https://github.com/krishchopra/veyesor'
+    repoUrl: 'https://github.com/hwiseongahn/genaihackathon'
   },
   {
     slug: 'More',
@@ -51,7 +51,7 @@ const projects = [
     description: 'more to come soon...',
     src: '/',
     selected: true,
-    repoUrl: 'https://ufc-client.vercel.app/'
+    repoUrl: '...'
   }
 ];
 
