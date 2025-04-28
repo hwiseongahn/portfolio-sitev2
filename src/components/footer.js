@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
+import SELogoDark from '../../public/logo_w.svg'
+import SELogoLight from '../../public/logo_b.png'
 import { useEffect, useState } from 'react'
 const FOOTER_LINKS = [
   {
@@ -56,8 +58,8 @@ const Footer = () => {
           <a href='https://cs.uwatering.com/#https://www.1800benson.ca/?nav=prev' className='text-foreground'>←</a>
           <a href='https://cs.uwatering.com/#https://www.1800benson.ca/' target='_blank'>
             <Image
-              src={isDark ? 'https://cs.uwatering.com/icon.white.svg' : 'https://cs.uwatering.com/icon.black.svg'}
-              alt='CS Webring'
+              src={isDark ? SELogoDark : SELogoLight}
+              alt='SE Webring'
               width={24}
               height={24}
             />
