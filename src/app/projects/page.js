@@ -6,13 +6,13 @@ import { motion } from 'framer-motion'
 export default function page() {
     const projects = [
         {
-          slug: 'summbot',
-          name: 'SummBot',
-          description: 'Discord bot for summarizing conversations',
-          src: 'summbotss.jpg',
-          techstack: ['React', 'Next.js', 'Tailwind CSS'],
-          selected: true,
-          repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
+            slug: 'SummBot',
+            name: 'SummBot',
+            description: 'Discord bot for summarizing conversations',
+            src: 'summbotss.jpg',
+            techstack: ['React', 'Next.js', 'Tailwind CSS'],
+            selected: true,
+            repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
         },
         {
           slug: 'Algae and CO2',
