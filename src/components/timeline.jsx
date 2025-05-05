@@ -32,9 +32,11 @@ const cardVariants = {
 export function Timeline() {
   const timelineRef = useRef(null);
   const isInView = useInView(timelineRef, { once: true, margin: '-100px' });
-  const { theme, resolvedTheme } = useTheme();
-
-  const currentTheme = theme === 'system' ? resolvedTheme : theme;
+  const [isDark, setIsDark] = useState(false)
+    const { resolvedTheme } = useTheme()
+    useEffect(() => {
+      setIsDark(resolvedTheme === 'dark')
+    }, [resolvedTheme])
 
 const [timelineEvents, setTimelineEvents] = useState([]);
 
@@ -56,10 +58,10 @@ useEffect(() => {
             year: "September 2023",
             title: "Dalhousie University",
             description: "Bachelor of Computer Science",
-            logo: currentTheme === 'dark' ? DalLogoDark : DalLogoLight
+            logo: isDark ? DalLogoDark : DalLogoLight
         }
-    ]);
-}, [currentTheme]);
+    ])
+}, [isDark]);
 
   return (
     <motion.div

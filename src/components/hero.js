@@ -25,9 +25,9 @@ const Hero = () => {
           <h1 className='font-title bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text text-2xl font-bold leading-9 text-transparent sm:text-4xl sm:leading-[3.5rem] dark:from-white dark:via-white/90 dark:to-white/70'>
             I&apos;m Hwiseong Ahn, studying{' '}
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#7f00de] to-[#ff007f]'>
-              Computer Science
+              Software Engineering
             </span>{' '}
-            at Dalhousie University.
+            at the University of Waterloo.
           </h1>
           <div className='text-muted-foreground text-sm text-slate-500'>Halifax, Nova Scotia • UTC/GMT -3</div>
         </motion.div>
