@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowUpRightIcon, LightbulbIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
 
 
 const variants = {
@@ -113,9 +114,9 @@ const SelectedProjects = () => {
           ))}
       </motion.div>
       <div className='my-8 flex items-center justify-center'>
-      {/* <Button variant="outline" onClick={handleClick}>
+      <Button variant="outline" onClick={handleClick}>
           See all projects
-        </Button> */}
+        </Button>
       </div>
     </motion.div>
   );

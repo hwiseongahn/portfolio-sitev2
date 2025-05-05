@@ -2,6 +2,7 @@
 
 import ProjectCards from '@/components/project-cards'
 import { motion } from 'framer-motion'
+import PageTitle, {pageTitle} from '@/components/page-title'
 
 export default function page() {
     const projects = [
@@ -39,6 +40,11 @@ export default function page() {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         /> */}
+        <PageTitle
+            title='Projects'
+            description='A collection of my projects and experiments.'
+            animate={true}
+        />
         <motion.div
           initial={{
             y: 40,
