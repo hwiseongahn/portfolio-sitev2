@@ -5,9 +5,9 @@ import PageTitle from '@/components/page-title'
 
 const imagesArray = [
   {
-    alt: "photo",
-    caption: "A photo",
-    src: "/photos/p14c.png",
+    alt: "newyork",
+    caption: "New York at night",
+    src: "/photos/newyorkplease.jpg",
   },
 ];
 
