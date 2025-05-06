@@ -28,7 +28,7 @@ const Header = ({name, description, github, code, slug}) => {
       repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
     },
     {
-      slug: 'Algae and CO2',
+      slug: 'AlgaeandCO2',
       name: 'Algae and CO₂ Heat Map',
       description: 'NASA Space Apps Challenge 2024',
       src: '/co2ss.png',

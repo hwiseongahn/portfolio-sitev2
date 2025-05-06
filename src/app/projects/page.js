@@ -16,13 +16,13 @@ export default function page() {
     repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
     },
     {
-        slug: 'Algae and CO2',
-        name: 'Algae and CO₂ Heat Map',
-        description: 'NASA Space Apps Challenge 2024',
-        src: 'co2ss.png',
-        techstack: ['Python', 'Flask', 'Folium', 'JavaScript'],
-        selected: true,
-        repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
+      slug: 'AlgaeandCO2',
+      name: 'Algae and CO₂ Heat Map',
+      description: 'NASA Space Apps Challenge 2024',
+      src: 'co2ss.png',
+      techstack: ['Python', 'Flask', 'Folium', 'JavaScript'],
+      selected: true,
+      repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
     },
     {
       slug: 'ClearCal',
