@@ -4,20 +4,20 @@ import { SiGithub, SiLinkedin, SiInstagram, SiX, SiYoutube } from 'react-icons/s
 
 const SOCIAL_LINKS = [
   {
-    href: "https://github.com/ch3mson",
+    href: "https://github.com/hwiseongahn",
     title: 'GitHub',
     icon: SiGithub
   },
   {
-    href: "https://www.linkedin.com/in/benson-yan-622413201/",
+    href: "https://www.linkedin.com/in/hwiseongahn/",
     title: 'Linkedin',
     icon: SiLinkedin
   },
-  {
-    href: "https://www.instagram.com/1800_benson/",
-    title: 'Instagram',
-    icon: SiInstagram
-  },
+  // {
+  //   href: "",
+  //   title: 'Instagram',
+  //   icon: SiInstagram
+  // },
 ]
 
 const Connect = () => {
