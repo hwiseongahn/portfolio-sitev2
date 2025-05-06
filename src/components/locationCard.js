@@ -79,7 +79,9 @@ const LocationCard = () => {
       }
     }, [])
 
-    const [locationName, setLocationName] = useState('Halifax, Nova Scotia');
+  const [locationName, setLocationName] = useState('Halifax, Nova Scotia');
+  const [activeButton, setActiveButton] = useState('home');
+
   return (
     <div className='shadow-feature-card dark:shadow-feature-card-dark relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl p-4 lg:p-6'>
       <div className='flex justify-between items-center gap-2'>
@@ -88,21 +90,25 @@ const LocationCard = () => {
           <h2 className='text-sm font-light'>{locationName}</h2>
         </div>
         <div className='text-sm font-light flex flex-row gap-2'>
-          <Button onClick={() => {focusRef.current = locationToAngles(43.4679, -80.5373);
-            setLocationName('Waterloo, Ontario')
+          <Button
+            onClick={() => {
+              focusRef.current = locationToAngles(43.4679, -80.5373);
+              setLocationName('Waterloo, Ontario');
+              setActiveButton('school');
             }}
-            variant='outline'
+            variant={activeButton === 'school' ? 'secondary' : 'outline'}
           >
-           School📍
+            School📍
           </Button>
-          <Button onClick={() => {focusRef.current = locationToAngles(44.6509, -63.5923);
-            setLocationName('Halifax, Nova Scotia');
+          <Button
+            onClick={() => {
+              focusRef.current = locationToAngles(44.6509, -63.5923);
+              setLocationName('Halifax, Nova Scotia');
+              setActiveButton('home');
             }}
-            className='text-right'
-            variant='outline'
-          > 
-           Home📍
-           
+            variant={activeButton === 'home' ? 'secondary' : 'outline'}
+          >
+            Home📍
           </Button>
         </div>
       </div>
@@ -136,7 +142,6 @@ const LocationCard = () => {
                 userSelect: 'none'
               }}
             />
-            
           </div>
         </div>
       </div>
