@@ -1,6 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button"
-
+import { projects } from '@/app/projects/projects.js'
 import { ArrowUpRightIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -18,45 +18,10 @@ const animation = {
 }
 
 const Header = ({name, description, github, code, slug}) => {
-  const projects = [
-    {
-      slug: 'SummBot',
-      name: 'SummBot',
-      description: 'Discord bot for summarizing conversations',
-      src: '/summbotss.jpg',
-      selected: true,
-      repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
-    },
-    {
-      slug: 'AlgaeandCO2',
-      name: 'Algae and CO₂ Heat Map',
-      description: 'NASA Space Apps Challenge 2024',
-      src: '/co2ss.png',
-      selected: true,
-      repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
-    },
-    {
-      slug: 'ClearCal',
-      name: 'ClearCal',
-      description: 'Mental Health and Generative AI Hackathon',
-      src: '/ClearCal.png',
-      selected: true,
-      repoUrl: 'https://github.com/hwiseongahn/genaihackathon'
-    },
-    {
-      slug: 'More',
-      name: 'Stay Tuned!',
-      description: 'more to come soon...',
-      src: '/',
-      selected: true,
-      repoUrl: '...'
-    }
-  ];
-    console.log(slug);
-    const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slug}`;
-  
-    const project = projects.find((project => project.slug === slug))
+  console.log(slug);
+  const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slug}`;
 
+  const project = projects.find((project => project.slug === slug))
 
   return (
     <div className='space-y-8 pt-10'>
