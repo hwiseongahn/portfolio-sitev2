@@ -84,7 +84,7 @@ const AboutMe = () => {
         </div>
       </motion.div>
       <div className="my-8 flex items-center justify-center">
-        <Link href="https://www.linkedin.com/in/benson-yan-622413201/" target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.linkedin.com/in/hwiseongahn/" target="_blank" rel="noopener noreferrer">
           <Button variant="outline">
             Know more about me
           </Button>
