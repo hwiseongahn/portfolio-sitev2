@@ -7,11 +7,15 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Image from "next/image";
 import { getServerSession } from "next-auth/next";
 import SessionProvider from "@/components/SessionProvider";
+import { icons } from "lucide-react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Hwiseong Ahn",
+  title: "Hwiseong Ahn Website",
   description: "Hwiseong's Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export const viewport = {
