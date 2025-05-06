@@ -13,7 +13,7 @@ const LocationCard = () => {
   const locationToAngles = (lat, long) => {
     return [Math.PI - ((long * Math.PI) / 180 - Math.PI / 2), ((lat * Math.PI) / 180) - 0.2]
   }
-  const focusRef = useRef([0, 0.5])
+  const focusRef = useRef([5.82228399430068, 0.579305218978736])
   const [{ r }, api] = useSpring(() => ({
     r: 0,
     config: {
@@ -27,8 +27,8 @@ const LocationCard = () => {
 
   useEffect(() => {
     let width = 0;
-    let currentPhi = 0;
-    let currentTheta = 0;
+    let currentPhi = 5.82228399430068;
+    let currentTheta = 0.579305218978736;
     const doublePi = Math.PI * 2;
     const onResize = () => {
       if (canvasRef.current && (width = canvasRef.current.offsetWidth)) {
@@ -40,8 +40,8 @@ const LocationCard = () => {
         devicePixelRatio: 2,
         width: width * 2,
         height: width * 2,
-        phi: 0,
-        theta: 0,
+        phi: 5.82228399430068,
+        theta: 0.579305218978736,
         dark: 1,
         diffuse: 3,
         mapSamples: 16000,
