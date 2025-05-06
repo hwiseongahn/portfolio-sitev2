@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Head from '../../public/head.png'
+import Clock from '@/components/clock';
 
 const Hero = () => {
   return (
@@ -29,7 +30,7 @@ const Hero = () => {
             </span>{' '}
             at the University of Waterloo.
           </h1>
-          <div className='text-muted-foreground text-sm text-slate-500'>Halifax, Nova Scotia • UTC/GMT -3</div>
+          <div className='text-muted-foreground text-sm text-slate-500 flex'>Halifax, Nova Scotia • UTC/GMT -3 &nbsp;<Clock/></div>
         </motion.div>
         <motion.div
           className='relative hidden size-28 md:block'

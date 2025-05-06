@@ -19,22 +19,6 @@ const Page = ({params}) => {
   
   const { name, code, description, github, url } = project
   
-    // const jsonLd = {
-    //   '@context': 'https://schema.org',
-    //   '@type': 'SoftwareApplication',
-    //   name,
-    //   description,
-    //   url,
-    //   applicationCategory: 'WebApplication',
-    //   author: {
-    //     '@type': 'Person',
-    //     name: SITE_NAME,
-    //     url: SITE_URL
-    //   },
-    //   sameAs: [github],
-    //   screenshot: `${SITE_URL}/images/projects/${slug}/cover.png`
-    // }
-  
   return (
     <>
       <script

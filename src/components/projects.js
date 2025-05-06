@@ -21,42 +21,6 @@ const variants = {
   }
 };
 
-// Mock project data
-// const projects = [
-//   {
-//     slug: 'SummBot',
-//     name: 'SummBot',
-//     description: 'Discord bot for summarizing conversations',
-//     src: '/summbotss.jpg',
-//     selected: true,
-//     repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
-//   },
-//   {
-//     slug: 'Algae and CO2',
-//     name: 'Algae and CO₂ Heat Map',
-//     description: 'NASA Space Apps Challenge 2024',
-//     src: '/co2ss.png',
-//     selected: true,
-//     repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
-//   },
-//   {
-//     slug: 'ClearCal',
-//     name: 'ClearCal',
-//     description: 'Mental Health and Generative AI Hackathon',
-//     src: '/ClearCal.png',
-//     selected: true,
-//     repoUrl: 'https://github.com/hwiseongahn/genaihackathon'
-//   },
-//   {
-//     slug: 'More',
-//     name: 'Stay Tuned!',
-//     description: 'more to come soon...',
-//     src: '/',
-//     selected: true,
-//     repoUrl: '...'
-//   }
-// ];
-
 const SelectedProjects = () => {
   const projectsRef = useRef(null);
   const isInView = useInView(projectsRef, { once: true, margin: '-100px' });
