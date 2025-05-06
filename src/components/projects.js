@@ -7,6 +7,7 @@ import { ArrowUpRightIcon, LightbulbIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import { projects } from '@/app/projects/projects.js';
 
 
 const variants = {
@@ -21,40 +22,40 @@ const variants = {
 };
 
 // Mock project data
-const projects = [
-  {
-    slug: 'SummBot',
-    name: 'SummBot',
-    description: 'Discord bot for summarizing conversations',
-    src: '/summbotss.jpg',
-    selected: true,
-    repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
-  },
-  {
-    slug: 'Algae and CO2',
-    name: 'Algae and CO₂ Heat Map',
-    description: 'NASA Space Apps Challenge 2024',
-    src: '/co2ss.png',
-    selected: true,
-    repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
-  },
-  {
-    slug: 'ClearCal',
-    name: 'ClearCal',
-    description: 'Mental Health and Generative AI Hackathon',
-    src: '/ClearCal.png',
-    selected: true,
-    repoUrl: 'https://github.com/hwiseongahn/genaihackathon'
-  },
-  {
-    slug: 'More',
-    name: 'Stay Tuned!',
-    description: 'more to come soon...',
-    src: '/',
-    selected: true,
-    repoUrl: '...'
-  }
-];
+// const projects = [
+//   {
+//     slug: 'SummBot',
+//     name: 'SummBot',
+//     description: 'Discord bot for summarizing conversations',
+//     src: '/summbotss.jpg',
+//     selected: true,
+//     repoUrl: 'https://github.com/hwiseongahn/summdiscordbot'
+//   },
+//   {
+//     slug: 'Algae and CO2',
+//     name: 'Algae and CO₂ Heat Map',
+//     description: 'NASA Space Apps Challenge 2024',
+//     src: '/co2ss.png',
+//     selected: true,
+//     repoUrl: 'https://github.com/hwiseongahn/NASAcommunitymapping'
+//   },
+//   {
+//     slug: 'ClearCal',
+//     name: 'ClearCal',
+//     description: 'Mental Health and Generative AI Hackathon',
+//     src: '/ClearCal.png',
+//     selected: true,
+//     repoUrl: 'https://github.com/hwiseongahn/genaihackathon'
+//   },
+//   {
+//     slug: 'More',
+//     name: 'Stay Tuned!',
+//     description: 'more to come soon...',
+//     src: '/',
+//     selected: true,
+//     repoUrl: '...'
+//   }
+// ];
 
 const SelectedProjects = () => {
   const projectsRef = useRef(null);
@@ -110,7 +111,7 @@ const SelectedProjects = () => {
         {projects
           .filter(project => project.selected)
           .map(project => (
-            <Card key={project.slug} project={project} src={project.src}/>
+            <Card key={project.slug} project={project} src={`/${project.src}`}/>
           ))}
       </motion.div>
       <div className='my-8 flex items-center justify-center'>
@@ -142,7 +143,7 @@ const Card = ({ project }) => {
         <Image 
           width={500} 
           height={500} 
-          src={src} 
+          src={`/${src}`} 
           alt={name} 
           className='rounded-lg object-cover w-full h-full'
         />

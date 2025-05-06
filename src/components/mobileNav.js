@@ -16,16 +16,12 @@ const navLinks = [
       label: "Home",
     },
     {
-      href: "/blog",
-      label: "Blog"
+      href: "/projects",
+      label: "Projects"
     },
     {
       href: "/gallery",
       label: "Gallery",
-    },
-    {
-      href: "/resume.pdf",
-      label: "Resume",
     },
   ]
 
