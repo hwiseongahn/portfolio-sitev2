@@ -30,7 +30,7 @@ const Hero = () => {
             </span>{' '}
             at the University of Waterloo.
           </h1>
-          <div className='text-muted-foreground text-sm text-slate-500 flex'>Halifax, Nova Scotia • UTC/GMT -3 &nbsp;<Clock/></div>
+          <div className='text-muted-foreground text-sm text-slate-500 flex'><Clock/></div>
         </motion.div>
         <motion.div
           className='relative hidden size-28 md:block'
