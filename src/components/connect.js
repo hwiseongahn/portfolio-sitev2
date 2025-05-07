@@ -1,6 +1,6 @@
 import { LinkIcon } from 'lucide-react'
 import Link from 'next/link'
-import { SiGithub, SiLinkedin, SiInstagram, SiX, SiYoutube } from 'react-icons/si'
+import { SiGithub, SiLinkedin} from 'react-icons/si'
 
 const SOCIAL_LINKS = [
   {

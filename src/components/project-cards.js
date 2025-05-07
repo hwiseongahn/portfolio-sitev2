@@ -14,7 +14,7 @@ const ProjectCards = ({projects = []}) => {
 }
 
 const ProjectCard = (project) => {
-  const { name, description, techstack, slug, src } = project
+  const { name, description, techstack = [], slug, src } = project
 
   return (
     <Link href={`/projects/${slug}`} className='shadow-feature-card group rounded-xl px-2 py-4'>

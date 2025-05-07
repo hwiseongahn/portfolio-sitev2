@@ -6,8 +6,6 @@ import { projects } from '@/app/projects/projects.js'
 const Page = ({params}) => {
 
   const slug = params.slug;  
-  console.log(slug);
-  const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slug}`;
 
   const project = projects.find((project => project.slug === slug))
   // const localizedPath = getLocalizedPath({ slug: `/projects/${slug}`, locale })
@@ -17,7 +15,7 @@ const Page = ({params}) => {
   //   notFound()
   }
   
-  const { name, code, description, github, url } = project
+  const { name, src } = project
   
   return (
     <>
@@ -28,7 +26,7 @@ const Page = ({params}) => {
       <div className='mx-auto max-w-3xl'>
         <Header {...project} />
         <Image
-          src={`/images/projects/${slug}/cover.png`}
+          src={`/${src}`}
           width={1280}
           height={832}
           alt={name}

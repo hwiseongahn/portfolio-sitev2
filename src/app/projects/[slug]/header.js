@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { projects } from '@/app/projects/projects.js'
 import { ArrowUpRightIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { SiGithub } from 'react-icons/si'
 
 import Link from 'next/link'
 
@@ -17,7 +18,7 @@ const animation = {
   }
 }
 
-const Header = ({name, description, github, code, slug}) => {
+const Header = ({name, description, slug}) => {
   console.log(slug);
   const currentUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slug}`;
 
@@ -41,15 +42,25 @@ const Header = ({name, description, github, code, slug}) => {
         animate={animation.show}
         transition={{ delay: 0.1 }}
       >
-
-          <Link href={project.repoUrl} className="">
-            project homepage
-            <ArrowUpRightIcon className='ml-2 size-5 transition-transform group-hover:-rotate-12' />
-          </Link>
-        
+        <Link href={project.url} className="">
+          <Button
+            variant='default'
+            className='p-2 group'
+            size='lg' 
+          >  
+          project homepage
+          <ArrowUpRightIcon className='m-2 size-5 transition-transform group-hover:-rotate-45' />
+          </Button>
+        </Link>
         <Link href={project.repoUrl} className="">
-          hwiseongahn/
-          <ArrowUpRightIcon className='ml-2 size-5 transition-transform group-hover:-rotate-12' />
+          <Button
+            variant='default'
+            className='p-2 group'
+            size='lg'
+          >
+          source code<SiGithub className="ml-2"/>
+          <ArrowUpRightIcon className='m-2 size-5 transition-transform group-hover:-rotate-45' />
+          </Button>  
         </Link>
       </motion.div>
     </div>
