@@ -1,14 +1,34 @@
 "use client"
-import Image from "next/image";
 import { ImageGallery } from "react-image-grid-gallery";
 import PageTitle from '@/components/page-title'
 
 const imagesArray = [
   {
     alt: "newyork",
-    caption: "New York at night",
+    caption: "New York at night (iPhone 13)",
     src: "/photos/newyorkplease.jpg",
   },
+  {
+    alt: "pangyo",
+    caption: "Sunset at Pangyo (iPhone 13)",
+    src: "/photos/pangyo.png",
+  },
+  {
+    alt: "torontoplane",
+    caption: "Toronto (iPhone 13)",
+    src: "/photos/torontoairplane.png",
+  },
+  {
+    alt: "bubly",
+    caption: "Bubly Spread (iPhone 13)",
+    src: "/photos/bubly.jpg",
+  },
+  {
+    alt: "killam",
+    caption: "Killam Library before last exam (iPhone 13)",
+    src: "/photos/killam.jpg",
+  },
+  
 ];
 
 export default function Gallery() {
@@ -26,15 +46,7 @@ export default function Gallery() {
           gapSize={22}
       />
       <p>A Gallery</p>
-      {/* <Image
-          width={1512}
-          height={550}
-          className='absolute left-1/2 top-0 -z-10 -translate-x-1/2'
-          src='/gradient-background-top.png'
-          alt=''
-          role='presentation'
-          priority
-      /> */}
+
     </>
   )
 }
