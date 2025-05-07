@@ -1,6 +1,6 @@
 "use client"
 import { ImageGallery } from "react-image-grid-gallery";
-import PageTitle from '@/components/page-title'
+import PageTitle from '@/components/page-title';
 
 const imagesArray = [
   {
@@ -36,7 +36,7 @@ export default function Gallery() {
     <>
       <PageTitle
         title = 'Gallery'
-        description = 'A collection of my photos.'
+        description = 'A collection of my photos 📷'
         animate = {true}
       />
       <ImageGallery

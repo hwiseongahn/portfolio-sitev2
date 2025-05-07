@@ -14,7 +14,7 @@ export default function page() {
       /> */}
       <PageTitle
           title='Projects'
-          description='A collection of my projects.'
+          description='A collection of my projects 💻'
           animate={true}
       />
       <motion.div
