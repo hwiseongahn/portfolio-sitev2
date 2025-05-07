@@ -79,7 +79,7 @@ const SelectedProjects = () => {
           ))}
       </motion.div>
       <div className='my-8 flex items-center justify-center'>
-      <Button variant="outline" onClick={handleClick}>
+        <Button variant="outline" onClick={handleClick}>
           See all projects
         </Button>
       </div>

@@ -8,20 +8,16 @@ const Page = ({params}) => {
   const slug = params.slug;  
 
   const project = projects.find((project => project.slug === slug))
-  // const localizedPath = getLocalizedPath({ slug: `/projects/${slug}`, locale })
-  // const url = `${SITE_URL}${localizedPath}`
 
   if (!project) {
-  //   notFound()
+    notFound()
   }
   
-  const { name, src } = project
+  const { name, src, paragraph } = project
   
   return (
     <>
       <script
-      //   type='application/ld+json'
-      //   dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className='mx-auto max-w-3xl'>
         <Header {...project} />
@@ -33,7 +29,7 @@ const Page = ({params}) => {
           className='my-12 rounded-lg'
           lazy={false}
         />
-        {/* <Mdx code={code} /> */}
+        <p className='text-md'>{paragraph}</p>
       </div>
     </>
   )
