@@ -37,40 +37,38 @@ const LocationCard = () => {
     }
     onResize()
     const globe = createGlobe(canvasRef.current, {
-        devicePixelRatio: 2,
-        width: width * 2,
-        height: width * 2,
-        phi: 5.82228399430068,
-        theta: 0.579305218978736,
-        dark: 1,
-        diffuse: 3,
-        mapSamples: 16000,
-        mapBrightness: 1.2,
-        baseColor: [1, 1, 1],
-        markerColor: [251 / 255, 200 / 255, 21 / 255],
-        glowColor: [1.2, 1.2, 1.2],
-        markers: [
-          { location: [43.4679, -80.5373], size: 0.1},
-          { location: [44.6509, -63.5923], size: 0.1},
-          { location: [35.676, 139.65], size: 0.1},
-          { location: [-34.60, -58.38], size: 0.1},
-        ],
-        onRender: (state) => {
-          state.phi = currentPhi
-          state.theta = currentTheta
-          const [focusPhi, focusTheta] = focusRef.current
-          const distPositive = (focusPhi - currentPhi + doublePi) % doublePi
-          const distNegative = (currentPhi - focusPhi + doublePi) % doublePi
-          // Control the speed
-          if (distPositive < distNegative) {
-            currentPhi += distPositive * 0.08
-          } else {
-            currentPhi -= distNegative * 0.08
-          }
-          currentTheta = currentTheta * 0.92 + focusTheta * 0.08
-          state.width = width * 2
-          state.height = width * 2
+      devicePixelRatio: 2,
+      width: width * 2,
+      height: width * 2,
+      phi: 5.82228399430068,
+      theta: 0.579305218978736,
+      dark: 1,
+      diffuse: 2,
+      mapSamples: 16000,
+      mapBrightness: 1.2,
+      baseColor: [1, 1, 1],
+      markerColor: [0.4, 0.4, 1],
+      glowColor: [1.2, 1.2, 1.2],
+      markers: [
+        { location: [43.4679, -80.5373], size: 0.1 },
+        { location: [44.6509, -63.5923], size: 0.1 },
+      ],
+      onRender: (state) => {
+        state.phi = currentPhi
+        state.theta = currentTheta
+        const [focusPhi, focusTheta] = focusRef.current
+        const distPositive = (focusPhi - currentPhi + doublePi) % doublePi
+        const distNegative = (currentPhi - focusPhi + doublePi) % doublePi
+        // Control the speed
+        if (distPositive < distNegative) {
+        currentPhi += distPositive * 0.08
+        } else {
+        currentPhi -= distNegative * 0.08
         }
+        currentTheta = currentTheta * 0.92 + focusTheta * 0.08
+        state.width = width * 2
+        state.height = width * 2
+      }
       })
       setTimeout(() => canvasRef.current.style.opacity = '1')
       return () => { 
