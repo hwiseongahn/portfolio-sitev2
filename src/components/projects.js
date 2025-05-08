@@ -7,8 +7,7 @@ import { ArrowUpRightIcon, LightbulbIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { projects } from '@/app/projects/projects.js';
-
+import { projects } from '@/app/[locale]/projects/projects.js';
 
 const variants = {
   initial: {

@@ -1,6 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button"
-import { projects } from '@/app/projects/projects.js'
+import { projects } from '@/app/[locale]/projects/projects.js'
 import { ArrowUpRightIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { SiGithub } from 'react-icons/si'
