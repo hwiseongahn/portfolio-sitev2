@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import { useSpring } from 'react-spring'
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
+import { useTranslations } from 'next-intl'
 
 const LocationCard = () => {
   const canvasRef = useRef(null)
@@ -79,6 +80,7 @@ const LocationCard = () => {
 
   const [locationName, setLocationName] = useState('Halifax, Nova Scotia');
   const [activeButton, setActiveButton] = useState('home');
+  const t = useTranslations('LocationCard');
 
   return (
     <div className='shadow-feature-card dark:shadow-feature-card-dark relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl p-4 lg:p-6'>
@@ -96,7 +98,7 @@ const LocationCard = () => {
             }}
             variant={activeButton === 'school' ? 'secondary' : 'outline'}
           >
-            School📍
+            {t("School")}📍
           </Button>
           <Button
             onClick={() => {

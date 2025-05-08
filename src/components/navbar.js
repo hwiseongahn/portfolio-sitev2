@@ -2,8 +2,10 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 const navLinks = [
+
   {
     href: "/",
     label: "Home",
@@ -19,7 +21,7 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-
+  const t = useTranslations('Navbar');
   const pathName = usePathname();
 
   return (
@@ -36,7 +38,7 @@ export default function Navbar() {
                 }`}
                 href={link.href}
               >
-                {link.label}
+                {t(link.label)}
               </Link>
               {isActive ? (
               <>

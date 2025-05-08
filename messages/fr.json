@@ -4,6 +4,21 @@
     "major" : "Ingénierie Logicielle",
     "School" : "à l'Université de Waterloo"
   },
+
+  "Navbar" : {
+    "Home" : "Accueil",
+    "Projects" : "Projets",
+    "Gallery" : "Galerie"
+  },
+
+  "AboutMe" : {
+    "About Me" : "À propos de moi"
+  },
+
+  "LocationCard" : {
+    "School" : "École"
+  },
+
   "LangToggle" : {
     "English" : "Anglais",
     "French" : "Français"

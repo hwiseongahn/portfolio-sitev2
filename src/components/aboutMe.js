@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
+import { useTranslations } from 'next-intl';
 
 // Placeholder components
 import Connect from './connect';
@@ -23,6 +24,7 @@ const variants = {
 };
 
 const AboutMe = () => {
+  const t = useTranslations('AboutMe');
   const cardsRef = useRef(null);
   const isInView = useInView(cardsRef, { once: true, margin: '-100px' });
 
@@ -57,7 +59,7 @@ const AboutMe = () => {
           duration: 0.3
         }}
       >
-        About Me
+        {t('About Me')}
       </motion.h2>
       <motion.div
         className="mt-12 grid gap-4 md:grid-cols-2 dark:text-neutral-100"

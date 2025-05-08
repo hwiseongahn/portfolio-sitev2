@@ -4,10 +4,24 @@
     "major" : "Software Engineering",
     "School" : "at the University of Waterloo"
   },
-  
-    "LangToggle" : {
-    "English" : "English",
-    "French" : "French"
+
+  "Navbar" : {
+    "Home" : "Home",
+    "Projects" : "Projects",
+    "Gallery" : "Gallery"
+  },
+
+  "AboutMe" : {
+    "About Me" : "About Me"
+  },
+
+  "LocationCard" : {
+    "School" : "School"
+  },
+
+  "LangToggle" : {
+  "English" : "English",
+  "French" : "French"
   }
  
 }
