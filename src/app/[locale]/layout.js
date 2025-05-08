@@ -34,7 +34,6 @@ export default async function RootLayout({ children , params }) {
   }
   const session = await getServerSession();
   console.log(session);
-  // const messages = await getMessages();
   
   return (
     <html lang={locale}>

@@ -1,6 +1,11 @@
 {
   "Hero" : {
-    "I'm" : "Je suis Hwiseong Ahn, étudiant en", 
-    "major" : "Ingénierie Logicielle"
+    "I am" : "Je suis Hwiseong Ahn, étudiant en", 
+    "major" : "Ingénierie Logicielle",
+    "School" : "à l'Université de Waterloo"
+  },
+  "LangToggle" : {
+    "English" : "Anglais",
+    "French" : "Français"
   }
 }
