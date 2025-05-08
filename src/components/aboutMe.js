@@ -30,9 +30,9 @@ const AboutMe = () => {
 
   const router = useRouter();
 
-  // const handleClick = () => {
-  //   router.push('/about');
-  // };
+  const handleClick = () => {
+    router.push('/about');
+  };
 
   return (
     <motion.div
@@ -86,11 +86,11 @@ const AboutMe = () => {
         </div>
       </motion.div>
       <div className="my-8 flex items-center justify-center">
-        <Link href="https://www.linkedin.com/in/hwiseongahn/" target="_blank" rel="noopener noreferrer">
-          <Button variant="outline">
+
+          <Button variant="outline" onClick={handleClick}>
             Know more about me
           </Button>
-        </Link>
+
       </div>
     </motion.div>
   );
