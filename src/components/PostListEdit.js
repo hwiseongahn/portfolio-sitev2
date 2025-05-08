@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Trash, Pencil, X } from 'lucide-react';
-import { deletePost, updatePost } from "@/app/actions/actions";
+import { deletePost, updatePost } from "@/app/[locale]/actions/actions";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

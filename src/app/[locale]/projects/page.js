@@ -3,7 +3,7 @@
 import ProjectCards from '@/components/project-cards'
 import { motion } from 'framer-motion'
 import PageTitle from '@/components/page-title'
-import { projects } from '@/app/projects/projects.js'
+import { projects } from '@/app/[locale]/projects/projects.js'
 
 export default function page() {
   return (

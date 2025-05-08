@@ -1,7 +1,7 @@
 "use client"
 import Header from './header'
 import Image from 'next/image'
-import { projects } from '@/app/projects/projects.js'
+import { projects } from '@/app/[locale]/projects/projects.js'
 
 const Page = ({params}) => {
 

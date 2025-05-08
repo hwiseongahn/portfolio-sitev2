@@ -4,8 +4,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Head from '../../public/head.png'
 import Clock from '@/components/clock';
+import {useTranslations} from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations('Hero');
   return (
     <div className='my-16 space-y-6'>
       <div className='flex justify-between gap-8'>
@@ -26,7 +28,7 @@ const Hero = () => {
           <h1 className='font-title bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text text-2xl font-bold leading-9 text-transparent sm:text-4xl sm:leading-[3.5rem] dark:from-white dark:via-white/90 dark:to-white/70'>
             I&apos;m Hwiseong Ahn, studying{' '}
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#7f00de] to-[#ff007f]'>
-              Computer Science
+              {t('major')}
             </span>{' '}
             at Dalhousie University.
           </h1>

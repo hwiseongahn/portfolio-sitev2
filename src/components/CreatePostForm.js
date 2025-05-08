@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { createPost } from '@/app/actions/actions';
+import { createPost } from '@/app/[locale]/actions/actions';
 import { useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
