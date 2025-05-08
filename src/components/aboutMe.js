@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import { useTranslations } from 'next-intl';
 
