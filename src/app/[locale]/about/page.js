@@ -33,6 +33,7 @@ export default function About() {
           </Link>
           <p>🗣️ Debate</p>
           <p>🏂 Snowboarding</p>
+          <p>🇫🇷 French</p>
         </div>  
       </div>  
     </>

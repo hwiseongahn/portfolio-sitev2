@@ -44,6 +44,8 @@ const Footer = () => {
                   key={href} 
                   href={href} 
                   className='text-muted-foreground hover:text-foreground transition-colors'
+                  target='_blank' 
+                  rel='noopener noreferrer'
                 >
                   {text}
                 </Link>
@@ -55,8 +57,7 @@ const Footer = () => {
       <div className='mt-20 text-sm flex justify-between items-center'>
         <div>&copy; {new Date().getFullYear()} Hwiseong Ahn</div>
         <div className='flex items-center gap-2'>
-          {/* <a href='https://cs.uwatering.com/#https://www.1800benson.ca/?nav=prev' className='text-foreground'>←</a> */}
-          <a href='https://se-webring.xyz/' target='_blank'>
+          <a href='https://se-webring.xyz/' target='_blank' rel='noopener noreferrer'>
             <Image
               src={isDark ? SELogoDark : SELogoLight}
               alt='SE Webring'
@@ -64,8 +65,9 @@ const Footer = () => {
               height={24}
             />
           </a>
-          SE Webring
-          {/* <a href='https://cs.uwatering.com/#https://www.1800benson.ca/?nav=next' className='text-foreground'>→</a> */}
+          <a href="https://se-webring.xyz/" target='_blank' rel='noopener noreferrer'>
+            <p>SE Webring</p>
+          </a>
         </div>
       </div>
     </footer>
