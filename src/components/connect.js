@@ -1,6 +1,6 @@
 import { LinkIcon } from 'lucide-react'
 import Link from 'next/link'
-import { SiGithub, SiLinkedin} from 'react-icons/si'
+import { SiGithub, SiLinkedin, SiInstagram} from 'react-icons/si'
 
 const SOCIAL_LINKS = [
   {
@@ -12,6 +12,11 @@ const SOCIAL_LINKS = [
     href: "https://www.linkedin.com/in/hwiseongahn/",
     title: 'Linkedin',
     icon: SiLinkedin
+  },
+  {
+    href: "https://www.instagram.com/hwiseong.a/",
+    title: 'Instagram',
+    icon: SiInstagram
   },
   // {
   //   href: "",
@@ -36,6 +41,8 @@ const Connect = () => {
               key={href}
               href={href}
               className='text-muted-foreground hover:text-foreground flex items-center gap-3 transition-colors'
+              rel = 'noopener noreferrer'
+              target = '_blank'
             >
               <Icon className='size-[18px]' />
               <h2 className='font-light'>{title}</h2>

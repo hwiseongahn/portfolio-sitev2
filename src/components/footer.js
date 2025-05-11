@@ -20,7 +20,9 @@ const FOOTER_LINKS = [
     links: [
       { href: 'https://www.linkedin.com/in/hwiseongahn/', text: 'LinkedIn', rel: 'noopener noreferrer' },
       { href: 'https://github.com/hwiseongahn', text: 'GitHub', rel: 'noopener noreferrer' },
+      { href: 'https://www.instagram.com/hwiseong.a/', text: 'Instagram', rel: 'noopener noreferrer' },
     ]
+
   },
 ]
 
