@@ -92,7 +92,7 @@ const Card = ({ project }) => {
   return (
     <Link
       key={slug}
-      href={repoUrl}
+      href={`/projects/${slug}`}
       className='shadow-feature-card dark:shadow-feature-card-dark group relative rounded-xl p-2'
     >
       <div className='flex items-center justify-between p-4'>
