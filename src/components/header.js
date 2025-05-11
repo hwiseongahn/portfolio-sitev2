@@ -5,7 +5,9 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Navbar from './navbar'
 import Image from 'next/image'
-import headSrc from '../../public/head.png'
+import { useTheme } from 'next-themes';
+import favicon from '../../public/favicon.ico'
+import faviconDark from '../../public/favicondark.ico'
 import { Separator } from "@/components/ui/separator"
 import { ModeToggle } from '@/components/ui/modeToggle'
 import MobileNav from './mobileNav'
@@ -14,6 +16,12 @@ import { LangToggle } from '@/components/ui/langToggle'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isDark, setIsDark] = useState(false)
+  const { resolvedTheme } = useTheme()
+
+  useEffect(() => {
+      setIsDark(resolvedTheme === 'dark')
+  }, [resolvedTheme])
 
   useEffect(() => {
     const changeBackground = () => {
@@ -53,7 +61,7 @@ const Header = () => {
         <span>Skip to main content</span>
       </a>
       <Link href='/' className='flex items-center justify-center'>
-        <Image src={headSrc} alt="Logo" width={40} height={40} />
+        <Image src={isDark ? faviconDark : favicon} alt="Logo" width={40} height={40} />
       </Link>
       <div className='flex items-center gap-2'>
         <Navbar/>

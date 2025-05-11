@@ -33,10 +33,10 @@ export function Timeline() {
   const timelineRef = useRef(null);
   const isInView = useInView(timelineRef, { once: true, margin: '-100px' });
   const [isDark, setIsDark] = useState(false)
-    const { resolvedTheme } = useTheme()
-    useEffect(() => {
-      setIsDark(resolvedTheme === 'dark')
-    }, [resolvedTheme])
+  const { resolvedTheme } = useTheme()
+  useEffect(() => {
+    setIsDark(resolvedTheme === 'dark')
+  }, [resolvedTheme])
 
 const [timelineEvents, setTimelineEvents] = useState([]);
 
