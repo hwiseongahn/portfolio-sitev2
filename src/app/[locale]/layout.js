@@ -22,7 +22,7 @@ export async function generateMetadata() {
       siteName: "Hwiseong Ahn",
       images: [
         {
-          url: "https://hwiportfolio.vercel.app/meanddarsh.jpg",
+          url: "https://hwiportfolio.vercel.app/preview.jpg",
           width: 1200,
           height: 630,
         },
