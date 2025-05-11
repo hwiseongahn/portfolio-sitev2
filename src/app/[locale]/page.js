@@ -12,7 +12,7 @@ export default function Home() {
       <AboutMe />
       <Timeline />
       <SelectedProjects />
-      <Contact />
+      <Contact/>
     </main>
     </>
   );

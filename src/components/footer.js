@@ -18,8 +18,8 @@ const FOOTER_LINKS = [
   {
     id: 'social',
     links: [
-      { href: 'https://www.linkedin.com/in/hwiseongahn/', text: 'LinkedIn' },
-      { href: 'https://github.com/hwiseongahn', text: 'GitHub' },
+      { href: 'https://www.linkedin.com/in/hwiseongahn/', text: 'LinkedIn', rel: 'noopener noreferrer' },
+      { href: 'https://github.com/hwiseongahn', text: 'GitHub', rel: 'noopener noreferrer' },
     ]
   },
 ]
@@ -37,15 +37,15 @@ const Footer = () => {
         {FOOTER_LINKS.map((list) => (
           <div key={list.id} className='mb-10 flex flex-col items-start gap-4 pr-4'>
             {list.links.map((link) => {
-              const { href, text } = link
+              const { href, text, rel } = link
 
               return (
                 <Link 
                   key={href} 
                   href={href} 
                   className='text-muted-foreground hover:text-foreground transition-colors'
-                  target='_blank' 
-                  rel='noopener noreferrer'
+                  rel= {rel}
+                  target = {rel ? '_blank' : undefined}
                 >
                   {text}
                 </Link>
