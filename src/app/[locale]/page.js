@@ -17,11 +17,11 @@ export async function generateMetadata() {
     openGraph: {
       title: "Hwiseong Ahn",
       description: "Portfolio of Hwiseong Ahn",
-      url: "https://hwiportfolio.vercel.app/en",
+      url: "https://www.hwiseong.com/",
       siteName: "Hwiseong Ahn",
       images: [
         {
-          url: "https://hwiportfolio.vercel.app/preview.jpg",
+          url: "https://www.hwiseong.com/preview.jpg",
           width: 1200,
           height: 630,
         },
@@ -33,7 +33,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title: "Hwiseong Ahn",
       description: "Portfolio of Hwiseong Ahn",
-      images: ["https://hwiportfolio.vercel.app/preview.jpg"],
+      images: ["https://www.hwiseong.com/preview.jpg"],
     },
     icons: {
       icon: "/favicon.ico",
