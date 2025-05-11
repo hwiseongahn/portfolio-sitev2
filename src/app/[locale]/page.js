@@ -4,7 +4,11 @@ import Hero from "@/components/hero";
 import Contact from "@/components/contact";
 import { Timeline } from "@/components/timeline";
 
-export const dynamic = "force-static";
+export const dynamicParams = false; // Optional optimization
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "fr" }]; // Your supported locales
+}
 
 export async function generateMetadata() {
   return {
