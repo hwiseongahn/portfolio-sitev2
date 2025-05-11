@@ -11,13 +11,36 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Hwiseong Ahn Website",
-  description: "Hwiseong's Portfolio",
-  icons: {
-    icon: "/favicon.ico",
-  }
-};
+export async function generateMetadata() {
+  return {
+    title: "Hwiseong Ahn",
+    description: "Hwiseong's Portfolio",
+    openGraph: {
+      title: "Hwiseong Ahn",
+      description: "Portfolio of Hwiseong Ahn",
+      url: "https://hwiportfolio.vercel.app/en",
+      siteName: "Hwiseong Ahn",
+      images: [
+        {
+          url: "https://hwiportfolio.vercel.app/meanddarsh.jpg",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Hwiseong Ahn",
+      description: "Portfolio of Hwiseong Ahn",
+      images: ["https://yourdomain.com/preview.png"],
+    },
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
+}
 
 export const viewport = {
   themeColor: [
