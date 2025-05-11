@@ -34,7 +34,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title: "Hwiseong Ahn",
       description: "Portfolio of Hwiseong Ahn",
-      images: ["https://yourdomain.com/preview.png"],
+      images: ["https://hwiportfolio.vercel.app/preview.jpg"],
     },
     icons: {
       icon: "/favicon.ico",
