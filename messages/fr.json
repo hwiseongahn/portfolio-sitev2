@@ -1,12 +1,13 @@
 {
   "Hero" : {
     "I am" : "Je suis Hwiseong Ahn, étudiant en", 
-    "major" : "Ingénierie Logicielle",
+    "major" : "génie logiciel",
     "School" : "à l'Université de Waterloo"
   },
 
   "Navbar" : {
     "Home" : "Accueil",
+    "About" : "À propos",
     "Projects" : "Projets",
     "Gallery" : "Galerie"
   },
@@ -16,7 +17,8 @@
   },
 
   "LocationCard" : {
-    "School" : "École"
+    "School" : "École",
+    "Home" : "chez moi"
   },
 
   "LangToggle" : {
