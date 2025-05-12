@@ -42,7 +42,7 @@ const Header = ({name, description, slug}) => {
         animate={animation.show}
         transition={{ delay: 0.1 }}
       >
-        <Link href={project.url} className="">
+        <Link href={project.url} className="" target="_blank" rel="noopener noreferrer">
           <Button
             variant='default'
             className='p-2 group'
@@ -52,7 +52,7 @@ const Header = ({name, description, slug}) => {
           <ArrowUpRightIcon className='m-2 size-5 transition-transform group-hover:-rotate-45' />
           </Button>
         </Link>
-        <Link href={project.repoUrl} className="">
+        <Link href={project.repoUrl} className="" target="_blank" rel="noopener noreferrer">
           <Button
             variant='default'
             className='p-2 group'
