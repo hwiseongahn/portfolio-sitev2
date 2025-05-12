@@ -51,7 +51,7 @@ export default function Gallery() {
     <>
       <PageTitle
         title = 'Gallery'
-        description = 'A collection of my photos 📷'
+        description = 'A collection of my photos (in no particular order) 📷'
         animate = {true}
       />
       <ImageGallery
