@@ -47,7 +47,7 @@ const Contact = () => {
           </div>
 
           <div className='flex flex-col justify-center px-4'>
-            <p className='font-title mb-2 bg-gradient-to-r from-black to-black/70 bg-clip-text text-3xl font-bold text-transparent dark:from-zinc-100 dark:to-zinc-400'>
+            <p className='font-title mb-2 bg-gradient-to-r from-black to-black/70 bg-clip-text text-3xl font-semibold text-transparent dark:from-zinc-100 dark:to-zinc-400'>
               Want to contact me?
             </p>
             <p className='text-zinc-800 dark:text-zinc-300'>

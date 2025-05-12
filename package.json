@@ -23,6 +23,7 @@
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.4",
     "framer-motion": "^11.3.31",
+    "geist": "^1.4.2",
     "i18next": "^25.0.1",
     "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.427.0",
