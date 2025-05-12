@@ -26,13 +26,13 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"/>&nbsp;Light
+          <Sun className="h-[1.1rem] w-[1.1rem] rotate-0 scale-100 transition-colors"/>&nbsp;Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"/>&nbsp;Dark
+          <Moon className="h-[1.1rem] w-[1.1rem] rotate-0 scale-100 transition-colors"/>&nbsp;Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Monitor className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"/>&nbsp;System
+          <Monitor className="h-[1.1rem] w-[1.1rem] rotate-0 scale-100 transition-colors"/>&nbsp;System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
