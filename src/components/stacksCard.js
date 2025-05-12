@@ -1,30 +1,51 @@
 'use client'
 
 import React from 'react';
-import * as SimpleIcons from 'react-icons/si';
+import {
+  SiCloudflare,
+  SiCss3,
+  SiDrizzle,
+  SiFigma,
+  SiFirebase,
+  SiGit,
+  SiHtml5,
+  SiJavascript,
+  SiMarkdown,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+  SiVitest
+} from '@icons-pack/react-simple-icons'
 import {Zap} from 'lucide-react';
 
 const CustomMarquee = ({ children, reverse, className }) => {
-    return (
-      <div className={`overflow-hidden ${className}`}>
-        <div className={`flex ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} hover:pause`}>
-          <div className="flex shrink-0 items-center justify-around gap-4 pr-4">
-            {children}
-          </div>
-          <div className="flex shrink-0 items-center justify-around gap-4 pr-4" aria-hidden="true">
-            {children}
-          </div>
+  return (
+    <div className={`overflow-hidden ${className} ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} w-[53rem]`}>
+      <div className={`flex hover:pause`}>
+        <div className="flex shrink-0 items-center justify-around gap-0 pr-0">
+          {children}
+        </div>
+        <div className="flex shrink-0 items-center justify-around gap-0 pr-0">
+          {children}
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 const StacksCard = () => {
   const icons = [
     'SiHtml5', 'SiCss3', 'SiJavascript', 'SiTypescript', 'SiFigma',
-    'SiTailwindcss', 'SiNextdotjs', 'SiReact', 'SiPython', 'SiPostgresql',
+    'SiTailwindcss', 'SiNextdotJs', 'SiReact', 'SiPython', 'SiPostgresql',
     'SiPrisma', 'SiMysql', 'SiFirebase', 'SiGit', 'SiVite',
-    'SiVisualstudiocode', 'SiCloudflare', 'SiMarkdown', 'SiJest', 'SiNodedotjs'
+    'SiVisualStudioCode', 'SiCloudflare', 'SiMarkdown', 'SiJest', 'SiNodeDotJs'
   ];
 
   return (
@@ -33,21 +54,21 @@ const StacksCard = () => {
         <Zap className='size-[18px]' />
         <h2 className='text-sm font-light'>Stacks</h2>
       </div>
-      <CustomMarquee className='py-4'>
-        {icons.slice(0, 10).map((icon, index) => {
-          const IconComponent = SimpleIcons[icon];
-          if (!IconComponent) return null; 
-          return <IconComponent key={index} className='size-10' />;
-        })}
-      </CustomMarquee>
-      <CustomMarquee className='py-4' reverse>
-        {icons.slice(10).map((icon, index) => {
-          const IconComponent = SimpleIcons[icon];
-          if (!IconComponent) return null; 
-          return <IconComponent key={index} className='size-10' />;
-        })}
-      </CustomMarquee>
-    </div>
+      <div className='overflow-hidden'>
+        <CustomMarquee className='py-4'>
+          {[SiPrisma, SiMysql, SiFirebase, SiGit, SiVite, SiDrizzle, SiCloudflare, SiMarkdown, SiVitest, SiNodedotjs].map((Icon, index) => (
+            <Icon key={index} className='w-[2.65rem]' />
+          ))}
+        </CustomMarquee>
+      </div>
+      <div className='overflow-hidden'>
+        <CustomMarquee className="py-4" reverse={true}>
+          {[SiHtml5, SiCss3, SiJavascript, SiTypescript, SiFigma, SiTailwindcss, SiNextdotjs, SiReact, SiPython, SiPostgresql].map((Icon, index) => (
+            <Icon key={index} className='w-[2.65rem]' />
+          ))}
+        </CustomMarquee>
+      </div>
+    </div>  
   );
 };
 
