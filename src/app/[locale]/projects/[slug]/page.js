@@ -29,7 +29,7 @@ const Page = ({params}) => {
           className='my-12 rounded-lg'
           lazy={false}
         />
-        <p className='text-md'>{paragraph}</p>
+        <p className='font-light tracking-normal text-gray-250 leading-relaxed'>{paragraph}</p>
       </div>
     </>
   )

@@ -75,7 +75,7 @@ useEffect(() => {
       className="w-full max-w-3xl mx-auto py-12 md:py-16 my-24"
     >
       <motion.h2
-        className="text-center text-3xl font-bold sm:text-4xl dark:text-neutral-100 mb-12"
+        className="text-center text-3xl font-semibold sm:text-4xl dark:text-neutral-100 mb-12"
         initial={{
           y: 30,
           opacity: 0

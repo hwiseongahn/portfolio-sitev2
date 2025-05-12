@@ -42,7 +42,7 @@ const SelectedProjects = () => {
       className='relative my-24'
     >
       <motion.h2
-        className='font-title text-center text-3xl font-bold sm:text-4xl'
+        className='font-title text-center text-3xl font-semibold sm:text-4xl'
         initial={{
           y: 30,
           opacity: 0

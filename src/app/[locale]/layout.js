@@ -9,7 +9,9 @@ import SessionProvider from "@/components/SessionProvider";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+import { GeistMono } from 'geist/font/mono'
+import { GeistSans } from 'geist/font/sans'
 
 export const viewport = {
   themeColor: [
@@ -28,8 +30,8 @@ export default async function RootLayout({ children , params }) {
   console.log(session);
   
   return (
-    <html lang={locale}>
-      <body className={`${inter.className} relative`}>
+    <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans relative ${GeistSans.variable}`}>
         <NextIntlClientProvider>
           <SessionProvider>
             <ThemeProvider
@@ -39,7 +41,7 @@ export default async function RootLayout({ children , params }) {
             disableTransitionOnChange
             >
               <Header />
-              <main id='skip-nav' className='mx-auto mb-16 max-w-5xl px-5 py-24 sm:px-8'>
+              <main id='skip-nav' className='mx-auto mb-16 max-w-5xl px-5 py-24 sm:px-8 font-sans'>
                 <div className="relative z-10">
                   {children}
                 </div>

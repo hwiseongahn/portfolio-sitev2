@@ -25,7 +25,7 @@ const Hero = () => {
             duration: 0.5
           }}
         >
-          <h1 className='font-title bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text text-2xl font-bold leading-9 text-transparent sm:text-4xl sm:leading-[3.5rem] dark:from-white dark:via-white/90 dark:to-white/70'>
+          <h1 className='font-title bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text text-2xl font-semibold leading-9 text-transparent sm:text-4xl sm:leading-[3.5rem] dark:from-white dark:via-white/90 dark:to-white/70'>
             {t('I am')}{' '}
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#7f00de] to-[#ff007f]'>
               {t('major')}
