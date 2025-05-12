@@ -13,6 +13,17 @@ export default function About() {
         animate={true}
       />
       <div className='flex flex-col items-start justify-start gap-4'>
+        <h1 className='text-2xl font-semibold'>Who am I</h1>
+        <p>I moved so much when I was younger, so when people ask me where I'm from I say Halifax but I also spent a 
+          significant part of my childhood in Toronto, Queens (NYC), and half a year in Seoul (I'm Korean🇰🇷).
+         <br/><br/>
+         I wanted to pursue medicine when I was younger but after getting rejected from
+         all the pre-med programs I applied to in Grade 12, I decided to continue with Computer Science, my second (and only) option. <br/><br/>
+         During my first year, despite having zero coding experience (what's a For Loop? 💔) I enjoyed
+         Programming/Software Development, something I did not think I would develop an interest in. So much so that after I finished my first year, although I had reapplied and got accepted to the pre-med programs
+         that I was rejected from, I decided to continue with Computer Science as it was simply more exciting. 
+        </p>
+
         <h1 className='text-2xl font-semibold'>Hobbies</h1>
         <div className='flex flex-col gap-2'>
           <Link 
