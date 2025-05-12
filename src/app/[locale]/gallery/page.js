@@ -14,6 +14,11 @@ const imagesArray = [
     src: "/photos/pangyo.png",
   },
   {
+    alt: "calmluhfit",
+    caption: "calm luh fit (iPhone 13)",
+    src: "/photos/calmluhfit.jpg"
+  },
+  {
     alt: "torontoplane",
     caption: "Toronto (iPhone 13)",
     src: "/photos/torontoairplane.png",
@@ -28,6 +33,16 @@ const imagesArray = [
     caption: "Killam Library before last exam (iPhone 13)",
     src: "/photos/killam.jpg",
   },
+  {
+    alt: "daldongnae",
+    caption: "kbbq muck (iPhone 13)",
+    src: "/photos/daldongnae.jpg"
+  },
+  {
+    alt: "doverstreetmarket",
+    caption : "DSM NY (iPhone 13)",
+    src : "/photos/doverstreet.jpg"
+  }
   
 ];
 
