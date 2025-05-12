@@ -22,8 +22,8 @@ export async function generateMetadata() {
       images: [
         {
           url: "https://www.hwiseong.com/preview.jpg",
-          width: 1200,
-          height: 900,
+          width: 840,
+          height: 630,
         },
       ],
       locale: "en_US",
