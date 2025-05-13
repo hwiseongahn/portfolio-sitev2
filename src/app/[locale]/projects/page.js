@@ -6,7 +6,7 @@ import PageTitle from '@/components/page-title'
 import { projects } from '@/app/[locale]/projects/projects.js'
 import { useTranslations } from 'next-intl';
 
-export default function page() {
+export default function Page() {
   const t = useTranslations("Projects");
   return (
     <>
