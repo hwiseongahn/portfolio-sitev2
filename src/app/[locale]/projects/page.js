@@ -4,8 +4,10 @@ import ProjectCards from '@/components/project-cards'
 import { motion } from 'framer-motion'
 import PageTitle from '@/components/page-title'
 import { projects } from '@/app/[locale]/projects/projects.js'
+import { useTranslations } from 'next-intl';
 
 export default function page() {
+  const t = useTranslations("Projects");
   return (
     <>
       {/* <script
@@ -13,8 +15,8 @@ export default function page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       /> */}
       <PageTitle
-          title='Projects'
-          description='A collection of my projects 💻'
+          title={t("Projects")}
+          description={t("Collection")}
           animate={true}
       />
       <motion.div

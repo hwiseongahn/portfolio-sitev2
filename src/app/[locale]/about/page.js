@@ -2,14 +2,15 @@
 import PageTitle from '@/components/page-title';
 import {Button} from '@/components/ui/button';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function About() {
-
+  const t = useTranslations("About");
   return (
     <>
       <PageTitle
-        title='About'
-        description={"👋 Hi! My name is Hwiseong and I'm interested in building things (usually software)."}
+        title={t("About")}
+        description={t("Hi")}
         animate={true}
       />
       <div className='flex flex-col items-start justify-start gap-4'>

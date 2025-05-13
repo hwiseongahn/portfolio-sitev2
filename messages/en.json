@@ -23,6 +23,22 @@
   "LangToggle" : {
   "English" : "English",
   "French" : "French"
+  },
+
+  "About" : {
+    "About" : "About",
+    "Hi" : "👋 Hi! My name is Hwiseong and I'm interested in building things (usually software)."
+  },
+
+  "Gallery" : {
+    "Gallery" : "Gallery",
+    "Collection" : "A collection of my photos (in no particular order) 📷"
+  },
+
+  "Projects" : {
+    "Projects" : "Projects",
+    "Collection" : "A collection of my projects 💻"
   }
+
  
 }

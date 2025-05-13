@@ -24,5 +24,20 @@
   "LangToggle" : {
     "English" : "Anglais",
     "French" : "Français"
+  },
+
+  "About" : {
+    "About" : "À propos",
+    "Hi" : "Salut! Je m'appelle Hwiseong et je suis intéressé par la construction de choses (généralement des logiciels)."
+  },
+
+  "Gallery" : {
+    "Gallery" : "Galerie",
+    "Collection" : "Une collection de mes photos (sans ordre particulier) 📷"
+  },
+
+  "Projects" : {
+    "Projects" : "Projets",
+    "Collection" : "Une collection de mes projets 💻"
   }
 }

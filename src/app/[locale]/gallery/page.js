@@ -1,6 +1,7 @@
 "use client"
 import { ImageGallery } from "react-image-grid-gallery";
 import PageTitle from '@/components/page-title';
+import {useTranslations} from "next-intl";
 
 const imagesArray = [
   {
@@ -47,11 +48,12 @@ const imagesArray = [
 ];
 
 export default function Gallery() {
+  const t = useTranslations("Gallery");
   return (
     <>
       <PageTitle
-        title = 'Gallery'
-        description = 'A collection of my photos (in no particular order) 📷'
+        title = {t("Gallery")}
+        description = {t("Collection")}
         animate = {true}
       />
       <ImageGallery
