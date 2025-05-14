@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from "next-intl"
 
 const navLinks = [
 
@@ -26,6 +26,7 @@ const navLinks = [
 
 export default function Navbar() {
   const t = useTranslations('Navbar');
+  const locale = useLocale();
   const pathName = usePathname();
 
   return (
@@ -40,7 +41,7 @@ export default function Navbar() {
                 className={`rounded px-3 py-2 text-sm font-medium transition-colors ${
                   isActive ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
                 }`}
-                href={link.href}
+                href={`/${locale}${link.href}`}
               >
                 {t(link.label)}
               </Link>
