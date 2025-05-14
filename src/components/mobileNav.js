@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
+import { useLocale, useTranslations } from "next-intl"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,6 +31,8 @@ const navLinks = [
   ]
 
 const MobileNav = () => {
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -46,8 +49,8 @@ const MobileNav = () => {
       <DropdownMenuContent align='end' className='min-w-40'>
         {navLinks.map((link) => (
           <DropdownMenuItem key={link.label} asChild>
-            <Link href={link.href} className='flex items-center gap-4'>
-              <div>{link.label}</div>
+            <Link href={`/${locale}${link.href}`} className='flex items-center gap-4'>
+              <div>{t(link.label)}</div>
             </Link>
           </DropdownMenuItem>
         ))}
