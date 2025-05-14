@@ -45,10 +45,10 @@ export function LangToggle() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => changeLanguage("en")}>
-                    🏴󠁧󠁢󠁥󠁮󠁧󠁿{t("English")}
+                    🏴󠁧󠁢󠁥󠁮󠁧󠁿&nbsp;{t("English")}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => changeLanguage("fr")}>
-                    🇫🇷{t("French")}
+                    🇫🇷&nbsp;{t("French")}
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
