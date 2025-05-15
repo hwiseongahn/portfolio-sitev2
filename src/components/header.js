@@ -12,12 +12,14 @@ import { Separator } from "@/components/ui/separator"
 import { ModeToggle } from '@/components/ui/modeToggle'
 import MobileNav from './mobileNav'
 import { LangToggle } from '@/components/ui/langToggle'
+import { useLocale, useTranslations } from 'next-intl'
 
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isDark, setIsDark] = useState(false)
-  const { resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme();
+  const locale = useLocale();
 
   useEffect(() => {
       setIsDark(resolvedTheme === 'dark')
@@ -60,7 +62,7 @@ const Header = () => {
       >
         <span>Skip to main content</span>
       </a>
-      <Link href='/' className='flex items-center justify-center'>
+      <Link href={`/${locale}`} className='flex items-center justify-center'>
         <Image src={isDark ? faviconDark : favicon} alt="Logo" width={40} height={40} />
       </Link>
       <div className='flex items-center gap-2'>

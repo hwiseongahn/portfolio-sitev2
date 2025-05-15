@@ -15,7 +15,7 @@ export default function About() {
       />
       <div className='flex flex-col items-start justify-start gap-4'>
         <h1 className='text-2xl font-semibold'>Who am I</h1>
-        <p className='font-light tracking-normal text-gray-250 leading-relaxed'>I moved so much when I was younger, so when people ask me where I&apos;m from I say Halifax but I also spent a 
+        <p className='font-light tracking-normal text-gray-250 leading-relaxed'>I moved so a lot when I was younger, so when people ask me where I&apos;m from I say Halifax but I also spent a 
           significant part of my childhood in Toronto, Queens (NYC), and half a year in Seoul (I&apos;m Korean🇰🇷).
          <br/><br/>
          I wanted to pursue medicine when I was younger but after getting rejected from
