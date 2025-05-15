@@ -10,17 +10,23 @@ export default function About() {
     <>
       <PageTitle
         title={t("About")}
-        description={t("Hi")}
+        description={t.rich("Hi", {
+          emoji: (chunks) => <span className="font-emoji">{chunks}</span>,
+        })}
         animate={true}
       />
-      <div className='flex flex-col items-start justify-start gap-4'>
+      <div className='flex flex-col items-start justify-start gap-4 font-light tracking-normal text-gray-250 leading-relaxed'>
         <h1 className='text-2xl font-semibold'>Who am I</h1>
-        <p className='font-light tracking-normal text-gray-250 leading-relaxed'>I moved a lot when I was younger, so when people ask me where I&apos;m from I say Halifax but I also spent a 
-          significant part of my childhood in Toronto, Queens (NYC), and half a year in Seoul (I&apos;m Korean🇰🇷).
-         <br/><br/>
+        <p>
+          {t.rich("I-moved", {
+            emoji: (chunks) => <span className="font-emoji">{chunks}</span>,
+          })}
+        </p>
+
+         <p>
          I wanted to pursue medicine when I was younger but after getting rejected from
          all the pre-med programs I applied to in Grade 12, I decided to continue with Computer Science, my second (and only) option. <br/><br/>
-         During my first year, despite having zero coding experience (what&apos;s a For Loop? 💔) I enjoyed
+         During my first year, despite having zero coding experience (what&apos;s a For Loop? <span className='font-emoji'>💔</span>) I enjoyed
          Programming/Software Development, something I did not think I would develop an interest in. So much so that after I finished my first year, although I had reapplied and got accepted to the pre-med programs
          that I was rejected from, I decided to continue with Computer Science as it was simply more exciting. 
         </p>

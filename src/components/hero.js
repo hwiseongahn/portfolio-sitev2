@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Head from '../../public/head.png'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Head from '../../public/head.png';
 import Clock from '@/components/clock';
 import {useTranslations} from "next-intl";
 
@@ -51,7 +51,7 @@ const Hero = () => {
             className='rounded-full'
             width={112}
             height={112}
-            alt='Benson Yan'
+            alt='Hwiseong Ahn'
             priority
           />
           <div className='absolute inset-0 -z-10 bg-gradient-to-tl from-purple-700 to-orange-700 opacity-50 blur-2xl' />

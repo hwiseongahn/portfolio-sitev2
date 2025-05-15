@@ -13,6 +13,7 @@ module.exports = {
 		fontFamily : {
 			sans: ['var(--font-geist-sans)'],
       		mono: ['var(--font-geist-mono)'],
+			emoji: ['"Apple Color Emoji"', '"Segoe UI Emoji"', '"Noto Color Emoji"', 'sans-serif'],
 		},
   		backgroundImage: {
   			pinned: 'linear-gradient(119deg, rgb(143 152 242) 0%, rgb(95 167 225) 30%, rgb(206 133 247) 47%, rgb(235 147 186) 69%, rgb(190 188 251) 80%)',

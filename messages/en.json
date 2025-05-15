@@ -27,7 +27,8 @@
 
   "About" : {
     "About" : "About",
-    "Hi" : "👋 Hi! My name is Hwiseong and I'm interested in building things (usually software)."
+    "Hi" : "<emoji>👋</emoji> Hi! My name is Hwiseong and I'm interested in building things (usually software).",
+    "I-moved" : "I moved a lot when I was younger, so when people ask me where I'm from I say Halifax but I also spent a significant part of my childhood in Toronto, Queens (NYC), and half a year in Seoul (I'm Korean<emoji>🇰🇷</emoji>)."
   },
 
   "Gallery" : {
