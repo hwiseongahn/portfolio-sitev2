@@ -5,6 +5,21 @@ import { useTranslations } from "next-intl";
 
 const imagesArray = [
   {
+    alt: "dinner with chemistry friends",
+    caption: "Dinner with our chemistry teacher and friends (friend's digicam)",
+    src: "/photos/chemdinner.jpg",
+  },
+  {
+    alt: "ib grad",
+    caption: "ib grad flick (iPhone 13)",
+    src: "/photos/ibgrad.jpg",
+  },
+  {
+    alt: "shopping with lil sis",
+    caption: "family trip 0.5 (iPhone 13)",
+    src: "/photos/lilsis.jpg",
+  },
+  {
     alt: "newyork",
     caption: "New York at night (iPhone 13)",
     src: "/photos/newyorkplease.jpg",
