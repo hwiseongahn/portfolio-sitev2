@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 const imagesArray = [
   {
     alt: "me and darsh",
-    caption: "me and this guy called Darsh (friend's digicam)",
+    caption: "me, Rory, and this guy called Darsh (friend's digicam)",
     src: "/photos/meanddarsh.jpg",
   },
   {
