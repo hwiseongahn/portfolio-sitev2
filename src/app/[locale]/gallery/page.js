@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { ImageGallery } from "react-image-grid-gallery";
-import PageTitle from '@/components/page-title';
-import {useTranslations} from "next-intl";
+import PageTitle from "@/components/page-title";
+import { useTranslations } from "next-intl";
 
 const imagesArray = [
   {
@@ -17,7 +17,7 @@ const imagesArray = [
   {
     alt: "calmluhfit",
     caption: "calm luh fit (iPhone 13)",
-    src: "/photos/calmluhfit.jpg"
+    src: "/photos/calmluhfit.jpg",
   },
   {
     alt: "torontoplane",
@@ -31,20 +31,19 @@ const imagesArray = [
   },
   {
     alt: "killam",
-    caption: "Killam Library before last exam (iPhone 13)",
+    caption: "Killam Library (iPhone 13)",
     src: "/photos/killam.jpg",
   },
   {
     alt: "daldongnae",
     caption: "kbbq muck (iPhone 13)",
-    src: "/photos/daldongnae.jpg"
+    src: "/photos/daldongnae.jpg",
   },
   {
     alt: "doverstreetmarket",
-    caption : "DSM NY (iPhone 13)",
-    src : "/photos/doverstreet.jpg"
-  }
-  
+    caption: "DSM NY (iPhone 13)",
+    src: "/photos/doverstreet.jpg",
+  },
 ];
 
 export default function Gallery() {
@@ -52,18 +51,17 @@ export default function Gallery() {
   return (
     <>
       <PageTitle
-        title = {t("Gallery")}
-        description = {t("Collection")}
-        animate = {true}
+        title={t("Gallery")}
+        description={t("Collection")}
+        animate={true}
       />
       <ImageGallery
-          imagesInfoArray={imagesArray}
-          columnCount={"auto"}
-          columnWidth={280}
-          gapSize={22}
+        imagesInfoArray={imagesArray}
+        columnCount={"auto"}
+        columnWidth={280}
+        gapSize={22}
       />
-      <p>A Gallery</p>
-
+      <p>A Gallery (in no particular order)</p>
     </>
-  )
+  );
 }
