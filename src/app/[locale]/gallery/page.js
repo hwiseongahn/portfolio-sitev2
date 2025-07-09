@@ -5,9 +5,9 @@ import { useTranslations } from "next-intl";
 
 const imagesArray = [
   {
-    alt: "dinner with chemistry friends",
-    caption: "Dinner with our chemistry teacher and friends (friend's digicam)",
-    src: "/photos/chemdinner.jpg",
+    alt: "me and darsh",
+    caption: "me and this guy called Darsh (friend's digicam)",
+    src: "/photos/meanddarsh.jpg",
   },
   {
     alt: "ib grad",
@@ -27,7 +27,7 @@ const imagesArray = [
   {
     alt: "pangyo",
     caption: "Sunset at Pangyo (iPhone 13)",
-    src: "/photos/pangyo.png",
+    src: "/photos/pangyo.jpg",
   },
   {
     alt: "calmluhfit",
@@ -37,7 +37,7 @@ const imagesArray = [
   {
     alt: "torontoplane",
     caption: "Toronto (iPhone 13)",
-    src: "/photos/torontoairplane.png",
+    src: "/photos/torontoairplane.jpg",
   },
   {
     alt: "bubly",
@@ -48,6 +48,11 @@ const imagesArray = [
     alt: "killam",
     caption: "Killam Library (iPhone 13)",
     src: "/photos/killam.jpg",
+  },
+  {
+    alt: "dinner with chemistry friends",
+    caption: "Dinner with our chemistry teacher and friends (friend's digicam)",
+    src: "/photos/chemdinner.jpg",
   },
   {
     alt: "daldongnae",
