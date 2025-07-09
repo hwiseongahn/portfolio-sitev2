@@ -51,7 +51,7 @@ const imagesArray = [
   },
   {
     alt: "dinner with chemistry friends",
-    caption: "Dinner with our chemistry teacher and friends (friend's digicam)",
+    caption: "Dinner with our chemistry teacher (friend's digicam)",
     src: "/photos/chemdinner.jpg",
   },
   {
